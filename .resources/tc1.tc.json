@@ -1,0 +1,20 @@
+{
+  "version":"1.1",
+  "metaData":{
+    "name":"tc1",
+    "scopePath":"",
+    "architecture":"seat_heating_controller",
+    "length":"1"
+  },
+  "vectorContent":{
+    "steps":[ {
+      "step":{
+        "number":"0"
+      }
+    } ]
+  },
+  "interface":{
+    "inputs":[ "SeatOccupied", "PowerMgtState", "PowerMgtState_ErrorStatus", "Get_ButtonPressed" ],
+    "parameters":[ "TemperatureRanges_TemperatureStage1", "TemperatureRanges_TemperatureStage2", "TemperatureRanges_TemperatureStage3" ]
+  }
+}
