@@ -10,8 +10,10 @@
 ep_sim/
 *.bak
 *_ep_stubs/
-*_btcdata/.cache/
+test/*_btcdata/.cache
 
 # Python
 __pycache__/
 *.pyc
+
+reports/
