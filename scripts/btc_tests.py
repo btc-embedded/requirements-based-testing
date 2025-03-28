@@ -24,8 +24,8 @@ def run_sil_tests(project_file, ep=None):
         'tlInitScript' : os.path.abspath('model/init.m'),
         'subsystemMatcher' : rf'.*/({subsystems_pattern})$'
     }
-    # ep.post('profiles', { 'path': project_file }, message="Creating test project")
-    # ep.post('architectures/targetlink', tl_import, message="Analysing model, generating and analysing code")
+    ep.post('profiles', { 'path': project_file }, message="Creating test project")
+    ep.post('architectures/targetlink', tl_import, message="Analysing model, generating and analysing code")
     
     scopes = ep.get('scopes')
     scope_uids = [scope['uid'] for scope in scopes]
