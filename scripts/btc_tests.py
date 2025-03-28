@@ -74,7 +74,7 @@ def run_sil_tests(project_file, ep=None):
         test_cases=test_cases,
         start_time=exec_start_time,
         project_name=project_name,
-        output_file=os.path.join(report_dir, 'test_results_milsil.xml')
+        output_file=os.path.join(report_dir, 'test_results.xml')
     )
 
     # Save *.epp
