@@ -84,8 +84,12 @@ def run_sil_tests(project_file, ep=None):
 def run_mil_tests():
     ep = EPRestApi(version='25.1p0')
     mil_projects = [p for p in glob('test/*.epx') if not p.endswith('_milsil.epx')]
+    all_passed = True
     for mil_project in mil_projects:
-        run_mil_tests_for_project(ep, mil_project)
+        is_passed = run_mil_tests_for_project(ep, mil_project)
+        if not is_passed:
+            all_passed = False
+    return all_passed
 
 def run_mil_tests_for_project(ep, project_file):
     project_file = os.path.abspath(project_file)
@@ -114,14 +118,17 @@ def run_mil_tests_for_project(ep, project_file):
 
     # Dump JUnit XML report
     test_cases = ep.get('test-cases-rbt')
-    util.dump_testresults_junitxml(
-        rbt_results=rbt_response,
-        scopes=scopes,
-        test_cases=test_cases,
-        start_time=exec_start_time,
-        project_name=project_name,
-        output_file=os.path.join(report_dir, 'test_results_mil.xml')
-    )
+    is_passed = rbt_response['testResults']['SL MIL (Toplevel)']['totalTests'] == rbt_response['testResults']['SL MIL (Toplevel)']['passedTests']
+    if not is_passed:
+        util.dump_testresults_junitxml(
+            rbt_results=rbt_response,
+            scopes=scopes,
+            test_cases=test_cases,
+            start_time=exec_start_time,
+            project_name=project_name,
+            output_file=os.path.join(report_dir, 'test_results.xml')
+        )
+    return is_passed
 
 
 def get_relevant_subsystems():

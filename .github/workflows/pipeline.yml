@@ -27,7 +27,7 @@ jobs:
     - name: Run tests
       shell: powershell
       run: |
-        python scripts/btc_tests.py
+        python scripts/run_tests.py
 
     # repo must be public to use pages
     # - name: Publish test results to GitHub Pages
