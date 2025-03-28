@@ -1,0 +1,96 @@
+{
+  "version":"1.1",
+  "metaData":{
+    "name":"condition_check",
+    "scopePath":"",
+    "architecture":"Wrapper_activation_condition_check",
+    "length":"8",
+    "draft":"false",
+    "created":"27 Mar 2025, 16:02",
+    "lastUpdated":"27 Mar 2025, 16:04"
+  },
+  "vectorContent":{
+    "steps":[ {
+      "step":{
+        "number":"0",
+        "inputs":[ {
+          "SeatOccupied_SeatOccupied_read":"0"
+        }, {
+          "PowerMgtState_PowerMgtState_read":"0"
+        }, {
+          "PowerMgtState_PowerMgtState_ErrorStatus_read":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"1",
+        "inputs":[ {
+          "PowerMgtState_PowerMgtState_ErrorStatus_read":"1"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"2",
+        "inputs":[ {
+          "PowerMgtState_PowerMgtState_read":"1"
+        }, {
+          "PowerMgtState_PowerMgtState_ErrorStatus_read":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"3",
+        "inputs":[ {
+          "PowerMgtState_PowerMgtState_ErrorStatus_read":"1"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"4",
+        "inputs":[ {
+          "SeatOccupied_SeatOccupied_read":"1"
+        }, {
+          "PowerMgtState_PowerMgtState_read":"0"
+        }, {
+          "PowerMgtState_PowerMgtState_ErrorStatus_read":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"5",
+        "inputs":[ {
+          "PowerMgtState_PowerMgtState_ErrorStatus_read":"1"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"6",
+        "comment":"activation conditions fulfilled",
+        "inputs":[ {
+          "PowerMgtState_PowerMgtState_read":"1"
+        }, {
+          "PowerMgtState_PowerMgtState_ErrorStatus_read":"0"
+        } ],
+        "outputs":[ {
+          "ActivationCondition_write":"1"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"7",
+        "inputs":[ {
+          "PowerMgtState_PowerMgtState_ErrorStatus_read":"1"
+        } ]
+      }
+    } ]
+  },
+  "interface":{
+    "inputs":[ "SeatOccupied_SeatOccupied_read", "PowerMgtState_PowerMgtState_read", "PowerMgtState_PowerMgtState_ErrorStatus_read" ],
+    "parameters":[ "RTE_OK" ],
+    "outputs":[ "ActivationCondition_write" ]
+  },
+  "origin":{
+    "type":"manual",
+    "date":"27 Mar 2025, 16:02:35"
+  }
+}

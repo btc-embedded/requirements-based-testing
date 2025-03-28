@@ -1,0 +1,5 @@
+{
+  "Default Test Cases" : {
+    "seat_heating_controller" : [ "tc1" ]
+  }
+}

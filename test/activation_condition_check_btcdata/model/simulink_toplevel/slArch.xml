@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sl:SimulinkArchitecture xmlns:sl="http://btc-es.de/ep/simulink/2014/12/09" modelVersion="1.1" modelPath="E:/home/WindowsFolders/My Documents/GitHub/thabok/requirements-based-testing/model/Wrapper_activation_condition_check.slx" modelCreationDate="2025-03-27T16:02:08" creator="developer">
+	<toolInfo name="Matlab" release="(R2023b)" version="23.2" patchLevel="" />
+	<toolInfo name="Simulink" release="(R2023b)" version="23.2" patchLevel="" />
+	<model modelID="model001" modelKind="model" modelVersion="1.1" modelPath="E:/home/WindowsFolders/My Documents/GitHub/thabok/requirements-based-testing/model/Wrapper_activation_condition_check.slx" creationDate="2025-03-27T16:02:08" modificationDate="2025-03-27T16:02:09">
+		<subsystem subsysID="ss1" physicalPath="Wrapper_activation_condition_check" path="" sampleTime="0.2" name="Wrapper_activation_condition_check" scopeKind="SUT" kind="subsystem">
+			<inport portNumber="1" name="SeatOccupied_SeatOccupied_read" physicalPath="Wrapper_activation_condition_check/SeatOccupied_SeatOccupied_read" path="SeatOccupied_SeatOccupied_read">
+				<boolean />
+			</inport>
+			<inport portNumber="2" name="PowerMgtState_PowerMgtState_read" physicalPath="Wrapper_activation_condition_check/PowerMgtState_PowerMgtState_read" path="PowerMgtState_PowerMgtState_read">
+				<enumType name="IDT_PowerState">
+					<enumElement name="NOK" value="0" />
+					<enumElement name="OK" value="1" />
+				</enumType>
+			</inport>
+			<inport portNumber="3" name="PowerMgtState_PowerMgtState_ErrorStatus_read" physicalPath="Wrapper_activation_condition_check/PowerMgtState_PowerMgtState_ErrorStatus_read" path="PowerMgtState_PowerMgtState_ErrorStatus_read">
+				<double />
+			</inport>
+			<parameter name="RTE_OK" path="sut/Constant" physicalPath="Wrapper_activation_condition_check/sut/Constant" origin="explicit_param" workspace="RTE_OK" initValue="0.0">
+				<double />
+				<usageContext path="sut/Constant" physicalPath="Wrapper_activation_condition_check/sut/Constant" simulinkBlockType="Constant" blockAttribute="Value" />
+			</parameter>
+			<outport portNumber="1" name="ActivationCondition_write" physicalPath="Wrapper_activation_condition_check/ActivationCondition_write" path="ActivationCondition_write">
+				<boolean />
+			</outport>
+		</subsystem>
+		<rootSystem refSubsysID="ss1" />
+	</model>
+	<root refModelID="model001" />
+</sl:SimulinkArchitecture>
