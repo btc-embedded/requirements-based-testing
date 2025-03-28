@@ -1,13 +1,13 @@
 {
   "version":"1.1",
   "metaData":{
-    "name":"tc1",
+    "name":"press_button_4_times",
     "scopePath":"",
     "architecture":"seat_heating_controller",
     "length":"9",
     "draft":"false",
     "created":"27 Mar 2025, 15:57",
-    "lastUpdated":"28 Mar 2025, 14:09"
+    "lastUpdated":"28 Mar 2025, 16:10"
   },
   "vectorContent":{
     "steps":[ {
