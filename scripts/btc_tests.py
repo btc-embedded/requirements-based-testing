@@ -9,10 +9,10 @@ from btc_embedded import EPRestApi, util
 import tempfile
 import shutil
 
-def run_sil_tests(project_file, ep=None):
-    ep = ep or EPRestApi(version='25.1p0')
+def run_sil_tests():
+    ep = EPRestApi(version='25.1p0')
 
-    project_file = os.path.abspath(project_file)
+    project_file = os.path.abspath('test/seat_heating_controller_milsil.epx')
     project_name = os.path.basename(project_file)[:-4]
     report_dir = os.path.abspath('reports')
     print(f"\nTesting {project_name} (MIL+SIL)\n")
@@ -216,4 +216,4 @@ def import_requirements(ep):
         ep.post('requirements-import', req_import_payload, message="Importing requirements from Polarion")
 
 if __name__ == '__main__':
-    run_sil_tests('test/seat_heating_controller_milsil.epx')
+    run_sil_tests()
