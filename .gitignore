@@ -4,7 +4,14 @@
 *.slxc
 *.slx.autosave
 *.mex64
+*.mexw64
 *_rtw/
+
+# TargetLink
+TLBuild/
+TLProj/
+TLSim/
+tl_clean.bat
 
 # BTC
 ep_sim/

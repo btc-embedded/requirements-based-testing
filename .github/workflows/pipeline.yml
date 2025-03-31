@@ -30,13 +30,13 @@ jobs:
         python scripts/run_tests.py
 
     # repo must be public to use pages
-    # - name: Publish test results to GitHub Pages
-    #   # only publish report on gh pages for main branch
-    #   if: github.ref == 'refs/heads/main'
-    #   uses: peaceiris/actions-gh-pages@v4
-    #   with:
-    #     github_token: ${{ secrets.GITHUB_TOKEN }}
-    #     publish_dir: reports
+    - name: Publish test results to GitHub Pages
+      # only publish report on gh pages for main branch
+      if: github.ref == 'refs/heads/main'
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: reports
             
     - name: Publish results
       uses: dorny/test-reporter@v1
