@@ -54,7 +54,7 @@ jobs:
     - name: Add test report link to PR
       if: always() && github.event_name == 'pull_request'
       run: |
-        REPORT_URL="https://btc-embedded.github.io/${{ github.event.repository.name }}/report.html"
+        REPORT_URL="https://btc-embedded.github.io/${{ github.event.repository.name }}/seat_heating_controller.html"
         API_URL="https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.number }}/comments"
         curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
           -H "Accept: application/vnd.github+json" \
