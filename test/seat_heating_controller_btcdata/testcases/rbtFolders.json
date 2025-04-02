@@ -1,5 +1,0 @@
-{
-  "Default Test Cases" : {
-    "seat_heating_controller" : [ "press_button_4_times" ]
-  }
-}
