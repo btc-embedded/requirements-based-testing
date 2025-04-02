@@ -63,3 +63,8 @@ jobs:
         }
         $body = @{ body = "Test report: [View Report]($REPORT_URL)" } | ConvertTo-Json -Compress
         Invoke-RestMethod -Uri $API_URL -Method Post -Headers $headers -Body $body -ContentType "application/json"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_REPOSITORY: ${{ github.repository }}
+        GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
+        GITHUB_EVENT_NUMBER: ${{ github.event.number }}
