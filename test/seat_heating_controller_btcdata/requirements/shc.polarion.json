@@ -1,0 +1,215 @@
+{
+  "metaData":{
+    "kind":"Polarion",
+    "name":"shc",
+    "externalUUID":"UUID http://polarion03.prom.local/polarion/redirect/project/shc",
+    "lastImportDate":"2 Apr 2025, 13:21",
+    "additionalAttributes":[ ]
+  },
+  "requirements":[ {
+    "scopePath":"",
+    "data":[ {
+      "identifier":"SHC-80",
+      "name":"0 - CondCheck",
+      "description":"The seat heating shall be enabled only if the seat is occupied, there's no error and the power management state reads OK. New Info!!!!\r\n  ",
+      "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-80",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-80",
+      "parent":"",
+      "lastUpdated":"2 Apr 2025, 13:21",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SHC-81",
+      "name":"Stage1_Request",
+      "description":"If the heat button is pressed once while the activation conditions are fulfilled, the controller shall request the high temperature stage. Thabo/Matthias wills wissen!",
+      "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-81",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-81",
+      "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-94",
+      "lastUpdated":"2 Apr 2025, 13:21",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SHC-82",
+      "name":"Stage1_TempValue",
+      "description":"The first temperature stage (high) request shall be transmitted to the heating actuaor as a calibratable temperature value \"params.high\"",
+      "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-82",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-82",
+      "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-94",
+      "lastUpdated":"2 Apr 2025, 13:21",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SHC-83",
+      "name":"Stage1_LEDFeedback",
+      "description":"If the first temperature stage (high) request is transmitted, all LEDs shall be turned on (1-1-1).",
+      "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-83",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-83",
+      "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-94",
+      "lastUpdated":"2 Apr 2025, 13:21",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SHC-84",
+      "name":"Stage2_Request",
+      "description":"If the heat button is pressed twice while the activation condtions are fulfilled, the controller shall request the medium temperature stage.",
+      "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-84",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-84",
+      "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-95",
+      "lastUpdated":"2 Apr 2025, 13:21",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SHC-85",
+      "name":"Stage2_TempValue",
+      "description":"The second temperature stage request shall be transmitted to the heating actuaor as a calibratable temperature value \"params.medium\"",
+      "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-85",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-85",
+      "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-95",
+      "lastUpdated":"2 Apr 2025, 13:21",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SHC-86",
+      "name":"Stage2_LEDFeedback",
+      "description":"If the second temperature stage (medium) request is transmitted, the LED1 and LED2 shall be turned on.",
+      "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-86",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-86",
+      "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-95",
+      "lastUpdated":"2 Apr 2025, 13:21",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SHC-87",
+      "name":"Stage3_Request",
+      "description":"If the heat button is pressed three times while the activation condtions are fulfilled, the controller shall request the low temperature stage.",
+      "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-87",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-87",
+      "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-96",
+      "lastUpdated":"2 Apr 2025, 13:21",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SHC-88",
+      "name":"Stage3_TempValue",
+      "description":"The third temperature stage (low) request shall be transmitted to the heating actuaor as a calibratable temperature value \"params.low\"",
+      "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-88",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-88",
+      "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-96",
+      "lastUpdated":"2 Apr 2025, 13:21",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SHC-89",
+      "name":"Stage3_LEDFeedback",
+      "description":"If the third temperature stage (low) request is transmitted, the LED1 shall be active while LED2 and LED3 shall be turned off.",
+      "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-89",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-89",
+      "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-96",
+      "lastUpdated":"2 Apr 2025, 13:21",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SHC-90",
+      "name":"TurnOff_Request",
+      "description":"If the heat button is pressed four times while the activation condtions are fulfilled, the controller shall request a temperature turn-off stage (temperature=0°C)\r\n  \r\n  new",
+      "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-90",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-90",
+      "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-97",
+      "lastUpdated":"2 Apr 2025, 13:21",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SHC-91",
+      "name":"TurnOff_Value",
+      "description":"The trun-off request shall be transmitted to the heating actuaor as a temperature value equal to 0°C",
+      "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-91",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-91",
+      "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-97",
+      "lastUpdated":"2 Apr 2025, 13:21",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SHC-92",
+      "name":"TurnOff_LEDFeedback",
+      "description":"If the trun-off request is transmitted, all LEDs shall be turned off",
+      "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-92",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-92",
+      "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-97",
+      "lastUpdated":"2 Apr 2025, 13:21",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SHC-94",
+      "name":"1 - Stage 1",
+      "description":"",
+      "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-94",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-94",
+      "parent":"",
+      "lastUpdated":"2 Apr 2025, 13:21",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SHC-95",
+      "name":"2 - Stage 2",
+      "description":"",
+      "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-95",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-95",
+      "parent":"",
+      "lastUpdated":"2 Apr 2025, 13:21",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SHC-96",
+      "name":"3 - Stage 3",
+      "description":"",
+      "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-96",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-96",
+      "parent":"",
+      "lastUpdated":"2 Apr 2025, 13:21",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SHC-97",
+      "name":"4 - Turn Off",
+      "description":"",
+      "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-97",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-97",
+      "parent":"",
+      "lastUpdated":"2 Apr 2025, 13:21",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    } ]
+  } ],
+  "settings":[ {
+    "key":"Host",
+    "value":"http://polarion03.prom.local"
+  }, {
+    "key":"Port",
+    "value":"80"
+  } ],
+  "importOptions":[ {
+    "key":"name_attr_value",
+    "value":"Title"
+  }, {
+    "key":"desc_attr_value",
+    "value":"Description"
+  }, {
+    "key":"Host",
+    "value":"http://polarion03.prom.local"
+  }, {
+    "key":"Port",
+    "value":"80"
+  }, {
+    "key":"Project URL",
+    "value":"http://polarion03.prom.local/polarion/redirect/project/shc"
+  }, {
+    "key":"Work Item Types",
+    "value":"Requirement"
+  }, {
+    "key":"Baseline Name",
+    "value":"Head / Current"
+  }, {
+    "key":"Baseline Revision",
+    "value":"Current"
+  } ]
+}

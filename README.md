@@ -4,7 +4,7 @@ This example demonstrates how to perform requirements-based testing of a MATLAB 
 ### CI Status & Test Report
 ![CI](https://github.com/btc-embedded/requirements-based-testing/actions/workflows/pipeline.yml/badge.svg)
 
-[BTC Test Report](https://btc-embedded.github.io/requirements-based-testing/seat_heating_controller.html)
+[BTC Test Report](https://btc-embedded.github.io/requirements-based-testing/report.html)
 
 ## Developer testing: Interactive Walk-through
 **Preparation**

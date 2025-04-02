@@ -41,7 +41,7 @@ def run_mil_tests_for_project(ep, project_file):
     # Create project report
     report = ep.post(f"scopes/{toplevel_scope_uid}/project-report", message="Creating test report")
     # export project report to a file called 'report.html'
-    ep.post(f"reports/{report['uid']}", { 'exportPath': report_dir, 'newName': project_name })
+    ep.post(f"reports/{report['uid']}", { 'exportPath': report_dir, 'newName': 'report' })
 
     # Dump JUnit XML report
     test_cases = ep.get('test-cases-rbt')
@@ -68,7 +68,7 @@ def run_sil_tests():
     
     # hook file for enhanced traceability
     ep.put('preferences', [{
-        'preferenceName': 'GENERAL_HOOK_COMMAND',
+        'preferenceName': 'GENERAL_HOOKS_COMMAND',
         'preferenceValue': f'python "{hook_file}"'}])
 
     # import TargetLink model with relevant subsystems
@@ -94,7 +94,7 @@ def run_sil_tests():
     # execute requirements-based tests
     rbt_exec_payload = {
         'UIDs': scope_uids,
-        'data' : { 'execConfigNames' : [ 'TL MIL', 'SIL' ] }
+        'data' : { 'execConfigNames' : [ 'SIL' ] }
     }
     exec_start_time = datetime.now()
     rbt_response = ep.post('scopes/test-execution-rbt', rbt_exec_payload, message="Executing requirements-based tests")
@@ -104,7 +104,7 @@ def run_sil_tests():
     # Create project report
     report = ep.post(f"scopes/{toplevel_scope_uid}/project-report?template-name=rbt-tl", message="Creating test report")
     # export project report to a file called 'report.html'
-    ep.post(f"reports/{report['uid']}", { 'exportPath': report_dir, 'newName': project_name })
+    ep.post(f"reports/{report['uid']}", { 'exportPath': report_dir, 'newName': 'report' })
 
     # Dump JUnit XML report
     test_cases = ep.get('test-cases-rbt')
