@@ -55,10 +55,11 @@ jobs:
     - name: Add test report link to PR
       if: always() && github.event_name == 'pull_request'
       run: |
-        $REPORT_URL = "https://btc-embedded.github.io/${{ github.event.repository.name }}/report.html"
-        $API_URL = "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.number }}/comments"
-        $BODY = "Test report: [View Report]($REPORT_URL)"
-        Invoke-RestMethod -Uri $API_URL -Method Post -Headers @{
-            Authorization = "Bearer ${{ secrets.GITHUB_TOKEN }}"
-            Accept = "application/vnd.github+json"
-        } -Body @{ body = $BODY } -ContentType "application/json"
+        $REPORT_URL = "https://thabok.github.io/$env:GITHUB_REPOSITORY_NAME/report.html"
+        $API_URL = "https://api.github.com/repos/$env:GITHUB_REPOSITORY/issues/$env:GITHUB_EVENT_NUMBER/comments"
+        $headers = @{
+            "Authorization" = "Bearer $env:GITHUB_TOKEN"
+            "Accept" = "application/vnd.github+json"
+        }
+        $body = @{ body = "Test report: [View Report]($REPORT_URL)" } | ConvertTo-Json -Compress
+        Invoke-RestMethod -Uri $API_URL -Method Post -Headers $headers -Body $body -ContentType "application/json"
