@@ -9,6 +9,7 @@ permissions:
   contents: write
   actions: read
   checks: write
+  pull-requests: write
 
 jobs:
   btc-tests:
@@ -56,8 +57,8 @@ jobs:
       run: |
         $REPORT_URL = "https://btc-embedded.github.io/${{ github.event.repository.name }}/report.html"
         $API_URL = "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.number }}/comments"
-        $BODY = @{ body = "Test report: [View Report]($REPORT_URL)" } | ConvertTo-Json -Depth 10
+        $BODY = "Test report: [View Report]($REPORT_URL)"
         Invoke-RestMethod -Uri $API_URL -Method Post -Headers @{
             Authorization = "Bearer ${{ secrets.GITHUB_TOKEN }}"
             Accept = "application/vnd.github+json"
-        } -Body $BODY -ContentType "application/json"
+        } -Body @{ body = $BODY }
