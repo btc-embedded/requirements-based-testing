@@ -61,4 +61,4 @@ jobs:
         Invoke-RestMethod -Uri $API_URL -Method Post -Headers @{
             Authorization = "Bearer ${{ secrets.GITHUB_TOKEN }}"
             Accept = "application/vnd.github+json"
-        } -Body @{ body = $BODY }
+        } -Body @{ body = $BODY } -ContentType "application/json"
