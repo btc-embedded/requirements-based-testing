@@ -4,7 +4,7 @@
     "Creator" : "developer",
     "Creation Date" : "27 Mar 2025, 15:38",
     "Modifier" : "developer",
-    "Modification Date" : "28 Mar 2025, 16:22",
+    "Modification Date" : "2 Apr 2025, 10:53",
     "Creation Tool Version" : "25.1p0",
     "OS" : "Windows",
     "Path" : "file:/E:/home/WindowsFolders/My%20Documents/GitHub/thabok/requirements-based-testing/test/seat_heating_controller.epx"
@@ -19,7 +19,7 @@
   "Architectures" : {
     "Simulink" : {
       "Creator" : "developer",
-      "Import Date" : "27/03/2025 15:39",
+      "Import Date" : "02/04/2025 10:48",
       "Matlab Version" : "Matlab 23.2 (R2023b)",
       "Simulink Version" : "Simulink 23.2 (R2023b)",
       "Model Creation Date" : "07/04/2022 09:55",
