@@ -689,7 +689,7 @@ li a {
  * @param {String} topic Id that will be scrolled to
  */
 function showPage(topicId) {
-  var topics = ["general","rbt","b2b",];
+  var topics = ["general","rbt",];
   for (var i = 0; i < topics.length; i++) {
     var topic = topics[i];
     var topicDiv = document.getElementById(topic);
@@ -754,7 +754,7 @@ function scrollToTargetAdjusted(id) {
  * It is NECESSARY to use this for combined target changes, so that the history reflects the singular action
  */
 function combinedShowTopicAndScroll(topicId, id) {
-  var topics = ["general","rbt","b2b",];
+  var topics = ["general","rbt",];
   for (var i = 0; i < topics.length; i++) {
     var topic = topics[i];
     var topicDiv = document.getElementById(topic);
@@ -846,9 +846,6 @@ function toggleSection(div_id, clickable_id ) {
                 <li class="topicNavigationLi" id="navigation_rbt" onclick="showPage('rbt');">
                     <a>Requirement-based Testing</a>
                 </li>
-                <li class="topicNavigationLi" id="navigation_b2b" onclick="showPage('b2b');">
-                    <a>Back-to-Back Testing</a>
-                </li>
             </ul>
             <!-- Section navigation -->
             <div id="sectionNavigation_general">
@@ -858,9 +855,6 @@ function toggleSection(div_id, clickable_id ) {
                             </li>
                             <li onclick="expandSectionOnNavigation('general_metaInformation_div','general_metaInformation_section'); scrollToTargetAdjusted('general_metaInformation_section')">
                                 <a>Meta Information</a>
-                            </li>
-                            <li onclick="expandSectionOnNavigation('general_messages_div','general_messages_section'); scrollToTargetAdjusted('general_messages_section')">
-                                <a>Messages</a>
                             </li>
                 </ul>
             </div>
@@ -877,20 +871,10 @@ function toggleSection(div_id, clickable_id ) {
                             </li>
                 </ul>
             </div>
-            <div id="sectionNavigation_b2b">
-                <ul class="sectionList">
-                            <li onclick="expandSectionOnNavigation('b2b_b2bTest_div','b2b_b2bTest_section'); scrollToTargetAdjusted('b2b_b2bTest_section')">
-                                <a>Back-to-Back Test</a>
-                            </li>
-                            <li onclick="expandSectionOnNavigation('b2b_codeAnalysis_div','b2b_codeAnalysis_section'); scrollToTargetAdjusted('b2b_codeAnalysis_section')">
-                                <a>Code Analysis</a>
-                            </li>
-                </ul>
-            </div>
         </div>
         <ul class="metainfo">
             <li><span>Creator:</span> developer</li>        
-            <li><span>Creation date:</span> 2025-03-31 15:45:21</li>     
+            <li><span>Creation date:</span> 2025-04-02 12:55:01</li>     
         </ul>
     </div>
 
@@ -939,43 +923,6 @@ function toggleSection(div_id, clickable_id ) {
         <div class="coverageValue -color">n/a</div>
         <div class="coverageLabel">Division by Zero</div>
     <a class="-color" onclick="combinedShowTopicAndScroll('rbt','rbt_codeAnalysis_section');"></a>
-    </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="sectionDiv">
-                <a onclick="showPage('b2b');" class="viewDetails">View Details</a>
-                <h3>Back-to-Back Testing</h3>
-                <div class="topicOverviewDiv">
-                        <div class="topicOverviewSection">
-                            <div class="topicOverviewSectionHeader">Back-to-Back Test</div>
-                            <div class="topicOverviewSectionContent">
-    <div class="statusContainer">
-        <div class="statusIcon ok-glyph"></div>
-    <a class="ok-color" onclick="combinedShowTopicAndScroll('b2b','b2b_b2bTest_section');">All tests are passed</a>
-    </div>
-                        </div>
-                    </div>
-                        <div class="topicOverviewSection">
-                            <div class="topicOverviewSectionHeader">Code Analysis</div>
-                            <div class="topicOverviewSectionContent">
-
-
-
-
-    <div class="statusContainer">
-        <h5>Coverage (Handled)</h5>
-        <div class="coverageValue ok-color">100%</div>
-        <div class="coverageLabel">MC/DC</div>
-    <a class="ok-color" onclick="combinedShowTopicAndScroll('b2b','b2b_codeAnalysis_section');">All goals are handled</a>
-    </div>
-
-    <div class="statusContainer">
-        <h5>Robustness (Unreachables)</h5>
-        <div class="coverageValue -color">n/a</div>
-        <div class="coverageLabel">Division by Zero</div>
-    <a class="-color" onclick="combinedShowTopicAndScroll('b2b','b2b_codeAnalysis_section');"></a>
     </div>
                         </div>
                     </div>
@@ -1066,7 +1013,7 @@ function toggleSection(div_id, clickable_id ) {
             </tr>
             <tr>
                 <td>Profile Creation Date</td>
-                <td>2025-03-31 15:44:02</td>
+                <td>2025-04-02 12:53:47</td>
             </tr>
             <tr>
                 <td>Profile Modifier</td>
@@ -1093,7 +1040,7 @@ function toggleSection(div_id, clickable_id ) {
                 </tr>
                 <tr>
                     <td>Import Date</td>
-                    <td>2025-03-31 15:44:29</td>
+                    <td>2025-04-02 12:54:19</td>
                 </tr>
                 <tr>
                     <td>Matlab Version</td>
@@ -1163,7 +1110,7 @@ function toggleSection(div_id, clickable_id ) {
                 </tr>
                 <tr>
                     <td>Import Date</td>
-                    <td>2025-03-31 15:44:30</td>
+                    <td>2025-04-02 12:54:20</td>
                 </tr>
                 <tr>
                     <td>Matlab Version</td>
@@ -1268,7 +1215,7 @@ function toggleSection(div_id, clickable_id ) {
         </tr>
         <tr>
             <td>Import Date</td>
-            <td>2025-03-31 15:44:29</td>
+            <td>2025-04-02 12:54:19</td>
         </tr>
         <tr>
             <td>Matlab Version</td>
@@ -1335,7 +1282,7 @@ function toggleSection(div_id, clickable_id ) {
         </tr>
         <tr>
             <td>Import Date</td>
-            <td>2025-03-31 15:44:30</td>
+            <td>2025-04-02 12:54:20</td>
         </tr>
         <tr>
             <td>Matlab Version</td>
@@ -1383,8 +1330,8 @@ function toggleSection(div_id, clickable_id ) {
         </tr>
     </table>
         <h4>Natural Language Requirements</h4>
-            <h5 class="collapsed anchored" onclick="toggleSection('2H9_req_table','2H9_req_header')" id="2H9_req_header">shc</h5>
-              <div class="hidden" id="2H9_req_table">         
+            <h5 class="collapsed anchored" onclick="toggleSection('2H7_req_table','2H7_req_header')" id="2H7_req_header">shc</h5>
+              <div class="hidden" id="2H7_req_table">         
                 <table class="table dualTable">
                         <tr>
                             <th>Property</th>
@@ -1408,7 +1355,7 @@ function toggleSection(div_id, clickable_id ) {
                         </tr>
                         <tr>
                             <td>Last import date</td>
-                            <td>2025-03-31</td>
+                            <td>2025-04-02</td>
                         </tr>
                         <tr>
                             <td>Name column</td>
@@ -1428,245 +1375,6 @@ function toggleSection(div_id, clickable_id ) {
                         </tr>
                 </table> 
               </div>
-            </div>
-        </div>
-        <div class="sectionPageDiv">
-            <h3 id="general_messages_section" onclick="toggleSection('general_messages_div','general_messages_section')" class="extended anchored">
-                3. Messages
-            </h3>
-            <div id="general_messages_div">
-      <table class="table">
-        <tr>
-          <th style="width:2%"></th>
-          <th style="width:70%">Message</th>
-          <th style="width:14%">Severity</th>
-          <th style="width:14%">Origin</th>
-        </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Some report extensions are not included.</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Scope &quot;seat_heating_controller&quot; skipped for engine &quot;CV&quot; and metric &quot;Code Coverage&quot; as coverage threshold 100% already reached.</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Scope &quot;Sa2_activation_condition_check&quot; skipped for engine &quot;CV&quot; and metric &quot;Code Coverage&quot; as coverage threshold 100% already reached.</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Scope &quot;Sa2_activation_condition_check&quot; skipped for engine &quot;ATG&quot; and metric &quot;Code Coverage&quot; as coverage threshold 100% already reached.</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Test Case &#39;press_button_4_times&#39; has been successfully imported from &#39;file:/C:/Users/DEVELO~1/AppData/Local/Temp/tmprffmcub4/press_button_4_times.tc.json&#39;</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Test Case &#39;condition_check&#39; has been successfully imported from &#39;file:/C:/Users/DEVELO~1/AppData/Local/Temp/tmpq703h_cq/condition_check.tc.json&#39;</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;test_crumbliness&#39; has been imported.</td>
-              <td>Information</td>
-              <td>test_crumbliness</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;fantastic_test&#39; has been imported.</td>
-              <td>Information</td>
-              <td>fantastic_test</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;passingTest&#39; has been imported.</td>
-              <td>Information</td>
-              <td>passingTest</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;testTempStage&#39; has been imported.</td>
-              <td>Information</td>
-              <td>testTempStage</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;Keks&#39; has been imported.</td>
-              <td>Information</td>
-              <td>Keks</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;TurnOff_LEDFeedback&#39; has been imported.</td>
-              <td>Information</td>
-              <td>TurnOff_LEDFeedback</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;TurnOff_Value&#39; has been imported.</td>
-              <td>Information</td>
-              <td>TurnOff_Value</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;TurnOff_Request&#39; has been imported.</td>
-              <td>Information</td>
-              <td>TurnOff_Request</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;4 - Turn Off&#39; has been imported.</td>
-              <td>Information</td>
-              <td>4 - Turn Off</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;Stage3_LEDFeedback&#39; has been imported.</td>
-              <td>Information</td>
-              <td>Stage3_LEDFeedback</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;Stage3_TempValue&#39; has been imported.</td>
-              <td>Information</td>
-              <td>Stage3_TempValue</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;Stage3_Request&#39; has been imported.</td>
-              <td>Information</td>
-              <td>Stage3_Request</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;3 - Stage 3&#39; has been imported.</td>
-              <td>Information</td>
-              <td>3 - Stage 3</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;Stage2_LEDFeedback&#39; has been imported.</td>
-              <td>Information</td>
-              <td>Stage2_LEDFeedback</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;Stage2_TempValue&#39; has been imported.</td>
-              <td>Information</td>
-              <td>Stage2_TempValue</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;Stage2_Request&#39; has been imported.</td>
-              <td>Information</td>
-              <td>Stage2_Request</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;2 - Stage 2&#39; has been imported.</td>
-              <td>Information</td>
-              <td>2 - Stage 2</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;Stage1_LEDFeedback&#39; has been imported.</td>
-              <td>Information</td>
-              <td>Stage1_LEDFeedback</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;Stage1_TempValue&#39; has been imported.</td>
-              <td>Information</td>
-              <td>Stage1_TempValue</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;Stage1_Request&#39; has been imported.</td>
-              <td>Information</td>
-              <td>Stage1_Request</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;1 - Stage 1&#39; has been imported.</td>
-              <td>Information</td>
-              <td>1 - Stage 1</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;0 - CondCheck&#39; has been imported.</td>
-              <td>Information</td>
-              <td>0 - CondCheck</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;Sample Variant&#39; has been imported.</td>
-              <td>Information</td>
-              <td>Sample Variant</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;Second alternative Sub-Feature&#39; has been imported.</td>
-              <td>Information</td>
-              <td>Second alternative Sub-Feature</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;First alternative Sub-Feature&#39; has been imported.</td>
-              <td>Information</td>
-              <td>First alternative Sub-Feature</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;Sample mandatory Feature with two alternatives&#39; has been imported.</td>
-              <td>Information</td>
-              <td>Sample mandatory Feature with two alternatives</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>C-Code architecture &quot;seat_heating_controller [C-Code]&quot; has successfully been imported.</td>
-              <td>Information</td>
-              <td>seat_heating_controller [C-Code]</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Default Compiler has been set to MinGW64 Compiler (C) (8.1.0)</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>TargetLink architecture &quot;seat_heating_controller&quot; has successfully been imported.</td>
-              <td>Information</td>
-              <td>seat_heating_controller</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Inlined function &quot;seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem&quot; is removed from subsystem hierarchy.
-Inlined functions cannot be analysed separately.</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Inlined function &quot;seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/button_press_to_temp_stage/convert_to_stage&quot; is removed from subsystem hierarchy.
-Inlined functions cannot be analysed separately.</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-      </table>
             </div>
         </div>
     </div>
@@ -1732,9 +1440,9 @@ Inlined functions cannot be analysed separately.</td>
 <div style="display:flex; text-align:center;">
     <div>    <div class="sc-gauge">
         <div class="sc-background">
-            <div class="sc-percentage covered" style="transform:rotate(102.857deg)"></div>
+            <div class="sc-percentage covered" style="transform:rotate(108deg)"></div>
             <div class="sc-mask"></div>
-            <span class="sc-value">57.1%</span>
+            <span class="sc-value">60%</span>
         </div>
     <span style="font-size:14px;">Informal Requirement Coverage</span>
     </div>
@@ -2381,20 +2089,6 @@ Inlined functions cannot be analysed separately.</td>
     <td>        n.a.
 </td>
   </tr>
-  <tr id="2Gy_req">
-    <td>        Keks
-</td>
-    <td>Keks description</td>
-    <td>0</td>
-<td>
-    <div class="error-glyph error-color">Not covered
-</div>
-</td>
-    <td>        n.a.
-</td>
-    <td>        n.a.
-</td>
-  </tr>
   <tr id="2GQ_req">
     <td>        Sample Variant
 </td>
@@ -2607,7 +2301,7 @@ Inlined functions cannot be analysed separately.</td>
     <td>        100%
 </td>
   </tr>
-  <tr id="2H4_req">
+  <tr id="2H2_req">
     <td>        fantastic_test
 </td>
     <td></td>
@@ -2621,7 +2315,7 @@ Inlined functions cannot be analysed separately.</td>
     <td>        n.a.
 </td>
   </tr>
-  <tr id="2H2_req">
+  <tr id="2H0_req">
     <td>        passingTest
 </td>
     <td></td>
@@ -2635,7 +2329,7 @@ Inlined functions cannot be analysed separately.</td>
     <td>        n.a.
 </td>
   </tr>
-  <tr id="2H0_req">
+  <tr id="2Gy_req">
     <td>        testTempStage
 </td>
     <td></td>
@@ -2649,7 +2343,7 @@ Inlined functions cannot be analysed separately.</td>
     <td>        n.a.
 </td>
   </tr>
-  <tr id="2H6_req">
+  <tr id="2H4_req">
     <td>        test_crumbliness
 </td>
     <td></td>
@@ -2897,602 +2591,6 @@ Inlined functions cannot be analysed separately.</td>
   </div>
 <h4 class="anchored extended" onclick="toggleSection('UDCG_stats_id_104030_table','UDCG_stats_id_104030_header')" id="UDCG_stats_id_104030_header" >User-defined Coverage Goals Statistics</h4>
 <div id="UDCG_stats_id_104030_table">
-<table class="table coverage-table-sizing" >
-  <tr>            
-    <th>Type</th>
-    <th>Total</th>
-    <th>Handled</th>
-    <th>Covered</th>
-    <th>Unreachable</th>
-  </tr>
-  <tr>
-    <td>User-defined Coverage Goals</td>
-    <td>0</td>
-    <td>n/a</td>
-    <td>n/a</td>
-    <td>n/a</td>
-  </tr>
-</table>
-</div>
-            </div>
-        </div>
-    </div>
-    <!-- Page: b2b -->
-    <div class="overviewDiv" id="b2b">
-    <!-- Page Overview -->
-    <div class="topicOverviewDiv">
-            <div class="sectionDiv">
-                <a class="viewDetails" onclick="expandSectionOnNavigation('b2b_b2bTest_div',' b2b_b2bTest_section'); scrollToTargetAdjusted('b2b_b2bTest_section')">View Details</a>
-                <h3>Back-to-Back Test</h3>
-  <table>
-    <tr>
-    <td><span style="padding-right: 15px;">
-            <a class="link" onclick="expandSectionOnNavigation('TL MIL vs SIL_2RL_section','TL MIL vs SIL_2RL_header'); scrollToTargetAdjusted('TL MIL vs SIL_2RL_header');">
-                 TL MIL vs SIL 
-            </a>
-        </span>
-    </td>
-    <td style="min-width:300px">
-      <div class="bar-chart">
-        
-        <div class="chart">
-    <div class="okBar bar size-2" style="flex-grow : 2"></div>
-    <div class="okBar bar size-0" style="flex-grow : 0"></div>
-    <div class="errorBar bar size-0" style="flex-grow : 0"></div>
-    <div class="errorBar bar size-0" style="flex-grow : 0"></div>
-        </div>
-      
-      </td>
-      <td><span style="padding-left: 15px;">100.0% Passed</span>
-      </div></td>
-      </tr>
-  </table>
-            </div>
-            <div class="sectionDiv">
-                <a class="viewDetails" onclick="expandSectionOnNavigation('b2b_codeAnalysis_div',' b2b_codeAnalysis_section'); scrollToTargetAdjusted('b2b_codeAnalysis_section')">View Details</a>
-                <h3>Code Analysis</h3>
-                    <div style="display:flex; justify-content:center;">
-    <div>
-    <div class="sc-gauge">
-        <div class="sc-background">
-            <div class="sc-percentage unreachable_blue" style="transform:rotate(174.906deg)"></div>
-            <div class="sc-percentage justified_green" style="transform:rotate(174.906deg)"></div>
-            <div class="sc-percentage covered" style="transform:rotate(174.906deg)"></div>
-            <div class="sc-mask"></div>
-            <span class="sc-value">97.1%</span>
-        </div>
-    <span style="font-size:14px;">Code Coverage (Handled Rate)</span>
-    </div>
-    </div>
-
-  <div>
-    <div class="sc-gauge">
-        <div class="sc-background">
-            <div class="sc-percentage unreachable_blue" style="transform:rotate(0deg)"></div>
-            <div class="sc-percentage justified_green" style="transform:rotate(0deg)"></div>
-            <div class="sc-percentage covered" style="transform:rotate(0deg)"></div>
-            <div class="sc-mask"></div>
-            <span class="sc-value">0%</span>
-        </div>
-    <span style="font-size:14px;">Robustness Checks (Handled Rate)</span>
-    </div>
-  </div>
-    <div class="sc-gauge">
-        <div class="sc-background" >
-        <div class="sc-mask"></div>
-            <span class="sc-value">n/a</span>
-        </div>
-    <span style="font-size:14px;">Domain Checks (Handled Rate)</span>
-    </div>
-    <div class="sc-gauge">
-        <div class="sc-background" >
-        <div class="sc-mask"></div>
-            <span class="sc-value">n/a</span>
-        </div>
-    <span style="font-size:14px;">User-defined Coverage (Handled Rate)</span>
-    </div>
-                    </div>
-            </div>
-    </div>
-        <!-- Page Sections -->
-        <h2 style="padding-left:20px;">Back-to-Back Testing</h2>
-        <div class="sectionPageDiv">
-            <h3 id="b2b_b2bTest_section" onclick="toggleSection('b2b_b2bTest_div','b2b_b2bTest_section')" class="extended anchored">
-                1. Back-to-Back Test
-            </h3>
-            <div id="b2b_b2bTest_div">
-  <h3>Test Results Overview</h3>
-  <table class="table">
-    <tr>
-      <th>Name</th>
-      <th>Scopes</th>
-      <th>Status</th>
-    </tr>
-      <tr>
-        <td>
-        <a class="link" onclick="expandSectionOnNavigation('TL MIL vs SIL_2RL_section','TL MIL vs SIL_2RL_header'); scrollToTargetAdjusted('TL MIL vs SIL_2RL_header');">
-        TL MIL vs SIL 
-        </a>
-        </td>
-        <td>
-          seat_heating_controller         </td>
-        <td><div class="        ok-glyph ok-color
-"> Passed</div></td>
-      </tr>
-  </table>
-
-    <h3 class="collapsed anchored" onclick="toggleSection('TL MIL vs SIL_2RL_section','TL MIL vs SIL_2RL_header')" id="TL MIL vs SIL_2RL_header">TL MIL vs SIL</h3>
-    <div class="hidden" id="TL MIL vs SIL_2RL_section">
-    <h4>Comparison Results</h4>
-      <table class="table">
-  <tr>
-    <th></th>
-    <th>Name</th>
-    <th>Length</th>
-    <th>Result</th>
-  </tr>
-      <tr>
-        <td>
-            #1
-        </td>
-        <td>
-                  <span class="icon-sdc" title="No problems during comparison"></span>:
- TL MIL_press_button_4_times <br>
-                  <span class="icon-sdc" title="No problems during comparison"></span>:
- SIL_press_button_4_times
-        </td>
-        <td> 9</td>
-        <td><div class="        ok-glyph ok-color
-"> Passed</div> </td>
-      </tr>
-      <tr>
-        <td>
-            #2
-        </td>
-        <td>
-                  <span class="icon-sdc" title="No problems during comparison"></span>:
- TL MIL_SV_ATG_1 <br>
-                  <span class="icon-sdc" title="No problems during comparison"></span>:
- SIL_SV_ATG_1
-        </td>
-        <td> 5</td>
-        <td><div class="        ok-glyph ok-color
-"> Passed</div> </td>
-      </tr>
-    </table>
-
-    <h4 class="extended anchored" onclick="toggleSection('TL MIL vs SIL_2RL_toleranceDef_table','TL MIL vs SIL_2RL_toleranceDef_header')" id="TL MIL vs SIL_2RL_toleranceDef_header">
-        Tolerance Definitions
-    </h4>
-      <table class="table" id="TL MIL vs SIL_2RL_toleranceDef_table">
-        <tr>
-          <th>Check</th>
-          
-          <th>Name</th>
-
-          <th>Kind</th>
-
-          <th>Data Type</th>
-
-          <th>Resolution</th>
-
-          <th>Offset</th>
-
-          <th>Rel. Tolerance</th>
-
-          <th>Abs. Tolerance</th>
-
-          <th>Lead Tolerance</th>
-
-          <th>Lag Tolerance</th>
-        </tr>
-
-          <tr>
-            <td style="text-align:center">
-                <div class="ok-glyph ok-color"></div>
-            </td>
-            <td>ActivationCondition_write</td>
-
-            <td>Output</td>
-
-            <td>Bool</td>
-
-            <td>2^0</td>
-
-            <td>0.0</td>
-
-            <td>0.0%</td>
-
-            <td>0.0</td>
-
-            <td>0.0</td>
-
-            <td>0.0</td>
-
-          </tr>
-
-          <tr>
-            <td style="text-align:center">
-                <div class="ok-glyph ok-color"></div>
-            </td>
-            <td>LEDFeedback(1)</td>
-
-            <td>Output</td>
-
-            <td>Bool</td>
-
-            <td>2^0</td>
-
-            <td>0.0</td>
-
-            <td>0.0%</td>
-
-            <td>0.0</td>
-
-            <td>0.0</td>
-
-            <td>0.0</td>
-
-          </tr>
-
-          <tr>
-            <td style="text-align:center">
-                <div class="ok-glyph ok-color"></div>
-            </td>
-            <td>LEDFeedback(2)</td>
-
-            <td>Output</td>
-
-            <td>Bool</td>
-
-            <td>2^0</td>
-
-            <td>0.0</td>
-
-            <td>0.0%</td>
-
-            <td>0.0</td>
-
-            <td>0.0</td>
-
-            <td>0.0</td>
-
-          </tr>
-
-          <tr>
-            <td style="text-align:center">
-                <div class="ok-glyph ok-color"></div>
-            </td>
-            <td>LEDFeedback(3)</td>
-
-            <td>Output</td>
-
-            <td>Bool</td>
-
-            <td>2^0</td>
-
-            <td>0.0</td>
-
-            <td>0.0%</td>
-
-            <td>0.0</td>
-
-            <td>0.0</td>
-
-            <td>0.0</td>
-
-          </tr>
-
-          <tr>
-            <td style="text-align:center">
-                <div class="ok-glyph ok-color"></div>
-            </td>
-            <td>Set_CoilTemperature</td>
-
-            <td>Output</td>
-
-            <td>UInt8</td>
-
-            <td>1.0</td>
-
-            <td>0.0</td>
-
-            <td>0.0%</td>
-
-            <td>0.0</td>
-
-            <td>0.0</td>
-
-            <td>0.0</td>
-
-          </tr>
-
-          <tr>
-            <td style="text-align:center">
-                <div class="ok-glyph ok-color"></div>
-            </td>
-            <td>activation_conditions_met</td>
-
-            <td>Local</td>
-
-            <td>Bool</td>
-
-            <td>2^0</td>
-
-            <td>0.0</td>
-
-            <td>0.0%</td>
-
-            <td>0.0</td>
-
-            <td>0.0</td>
-
-            <td>0.0</td>
-
-          </tr>
-
-          <tr>
-            <td style="text-align:center">
-                <div class="ok-glyph ok-color"></div>
-            </td>
-            <td>activation_conditions_met</td>
-
-            <td>Local</td>
-
-            <td>Bool</td>
-
-            <td>2^0</td>
-
-            <td>0.0</td>
-
-            <td>0.0%</td>
-
-            <td>0.0</td>
-
-            <td>0.0</td>
-
-            <td>0.0</td>
-
-          </tr>
-      </table>
-    
-    <h4>Execution Record Comparisons</h4>
-
-    There are no failed results.
-    </div>
-            </div>
-        </div>
-        <div class="sectionPageDiv">
-            <h3 id="b2b_codeAnalysis_section" onclick="toggleSection('b2b_codeAnalysis_div','b2b_codeAnalysis_section')" class="extended anchored">
-                2. Code Analysis
-            </h3>
-            <div id="b2b_codeAnalysis_div">
-
-<h4 class="anchored extended" onclick="toggleSection('Code Coverage Statistics_id_204010_table','Code Coverage Statistics_id_204010_header')" id="Code Coverage Statistics_id_204010_header">Code Coverage Statistics</h4>
-<table class="table coverage-table coverage-table-sizing" id="Code Coverage Statistics_id_204010_table">
-  <tr>
-    <th></th>
-    <th>Properties</th>
-    <th colspan="2">Handled</th>
-    <th colspan="2">Covered</th>
-    <th colspan="2">Unreachable (n/inf)</th>
-    <th colspan="2">Justified</th>
-  </tr>
-  
-  <tr>
-    <td>Statement (STM)</td>
-    <td>36</td>
-    <td>36</td>
-    <td>100.0%</td>
-    <td>36</td>
-    <td>100.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-  </tr>
-  
-  
-  <tr>
-    <td>Decision/Branch (D)</td>
-    <td>14</td>
-    <td>14</td>
-    <td>100.0%</td>
-    <td>14</td>
-    <td>100.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-  </tr>
-  
-  
-  <tr>
-    <td>Condition (C)</td>
-    <td>20</td>
-    <td>20</td>
-    <td>100.0%</td>
-    <td>20</td>
-    <td>100.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-  </tr>
-  
-  
-  <tr>
-    <td>C/DC and MC/DC (MCDC)</td>
-    <td>42</td>
-    <td>42</td>
-    <td>100.0%</td>
-    <td>42</td>
-    <td>100.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-  </tr>
-  
-  
-  <tr>
-    <td>Function (F)</td>
-    <td>4</td>
-    <td>4</td>
-    <td>100.0%</td>
-    <td>4</td>
-    <td>100.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-  </tr>
-  
-  
-  <tr>
-    <td>Function Call (FC)</td>
-    <td>3</td>
-    <td>3</td>
-    <td>100.0%</td>
-    <td>3</td>
-    <td>100.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-  </tr>
-  
-  
-  <tr>
-    <td>Switch-Case (SC)</td>
-    <td>4</td>
-    <td>4</td>
-    <td>100.0%</td>
-    <td>4</td>
-    <td>100.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-  </tr>
-  
-  
-  <tr>
-    <td>Relational Operator (RO)</td>
-    <td>25</td>
-    <td>22</td>
-    <td>88.0%</td>
-    <td>22</td>
-    <td>88.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-  </tr>
-  
-</table>
-
-
-
-<h4 class="anchored extended" onclick="toggleSection('Robustness Checks Statistics_id_204010_table','Robustness Checks Statistics_id_204010_header')" id="Robustness Checks Statistics_id_204010_header">Robustness Checks Statistics</h4>
-<table class="table coverage-table coverage-table-sizing" id="Robustness Checks Statistics_id_204010_table">
-  <tr>
-    <th></th>
-    <th>Properties</th>
-    <th colspan="2">Handled</th>
-    <th colspan="2">Covered</th>
-    <th colspan="2">Unreachable (n/inf)</th>
-    <th colspan="2">Justified</th>
-  </tr>
-  
-  <tr>
-    <td>Division By Zero (DZ)</td>
-    <td>0</td>
-    <td>0</td>
-    <td>n/a</td>
-    <td>0</td>
-    <td>n/a</td>
-    <td>0</td>
-    <td>n/a</td>
-    <td>0</td>
-    <td>n/a</td>
-  </tr>
-  
-  
-  <tr>
-    <td>Downcast (CA)</td>
-    <td>6</td>
-    <td>0</td>
-    <td>0.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-  </tr>
-  
-  
-  <tr>
-    <td>Array out of Bounds (AOB)</td>
-    <td>3</td>
-    <td>0</td>
-    <td>0.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-    <td>0</td>
-    <td>0.0%</td>
-  </tr>
-  
-</table>
-
-
-  <h4 class="anchored extended" onclick="toggleSection('DC_id_204020_stats','DC_stats_id_204020_header')" id="DC_stats_id_204020_header">Domain Checks Statistics</h4>
-  <div id="DC_id_204020_stats">
-      <table class="table coverage-table-sizing">
-        <tr>
-          <th>Type</th>
-          <th>Total</th>
-          <th>Handled</th>
-          <th>Covered</th>
-          <th>Unreachable</th>
-        </tr>
-            <tr>
-              <td>Valid Ranges</td>
-              <td>
-                0
-              </td>
-              <td>
-                n/a
-              </td>
-              <td>
-                n/a
-              </td>
-              <td>
-                n/a
-              </td>
-            </tr>
-            <tr>
-              <td>Invalid Ranges</td>
-              <td>
-                0
-              </td>
-              <td>
-                n/a
-              </td>
-              <td>
-                n/a
-              </td>
-              <td>
-                n/a
-              </td>
-            </tr>
-      </table>
-  </div>
-<h4 class="anchored extended" onclick="toggleSection('UDCG_stats_id_204030_table','UDCG_stats_id_204030_header')" id="UDCG_stats_id_204030_header" >User-defined Coverage Goals Statistics</h4>
-<div id="UDCG_stats_id_204030_table">
 <table class="table coverage-table-sizing" >
   <tr>            
     <th>Type</th>
