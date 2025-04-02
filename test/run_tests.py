@@ -61,9 +61,15 @@ def run_sil_tests():
     ep = EPRestApi(version='25.1p0')
 
     project_file = os.path.abspath('test/seat_heating_controller_milsil.epp')
+    hook_file = os.path.abspath('test/btc_hooks.py')
     project_name = os.path.basename(project_file)[:-4]
     report_dir = os.path.abspath('reports')
     print(f"\nTesting {project_name} (MIL+SIL)\n")
+    
+    # hook file for enhanced traceability
+    ep.put('preferences', [{
+        'preferenceName': 'GENERAL_HOOK_COMMAND',
+        'preferenceValue': f'python "{hook_file}"'}])
 
     # import TargetLink model with relevant subsystems
     relevant_subsystems, subsystems_pattern = get_relevant_subsystems()
