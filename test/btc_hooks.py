@@ -30,10 +30,13 @@ def main(input_data) -> dict:
     return_data = {}
     
     if use_case == ARCHITECTURE_META_INFO:
-        return_data["metaData"] = collect_architecture_metadata(meta_data)
-        
+        try:
+            return_data["metaData"] = collect_architecture_metadata(meta_data)
+        except: pass
     elif use_case == TESTING_META_INFO:
-        return_data["metaData"] = collect_testing_metadata(meta_data)
+        try:
+            return_data["metaData"] = collect_testing_metadata(meta_data)
+        except: pass
     
     return return_data
 
