@@ -4,22 +4,22 @@
     "Creator" : "developer",
     "Creation Date" : "4 Apr 2025, 13:31",
     "Modifier" : "developer",
-    "Modification Date" : "4 Apr 2025, 22:45",
+    "Modification Date" : "4 Apr 2025, 23:08",
     "Creation Tool Version" : "25.1p0",
     "OS" : "Windows",
     "Path" : "file:/E:/home/WindowsFolders/My%20Documents/GitHub/thabok/requirements-based-testing/test/seat_heating_controller.epx"
   },
   "Compiler" : {
-    "Name" : "mingw64",
-    "Info" : "MinGW64 Compiler (C) (6.3.0)",
+    "Name" : "(Internal) MinGW64",
+    "Info" : "(Internal) MinGW 64 Compiler (C) (8.1.0)",
     "Bitsize" : 64,
-    "Replaceable" : false,
+    "Replaceable" : true,
     "Default" : true
   },
   "Architectures" : {
     "Simulink" : {
       "Creator" : "developer",
-      "Import Date" : "04/04/2025 22:44",
+      "Import Date" : "04/04/2025 22:57",
       "Matlab Version" : "Matlab 9.13 (R2022b)",
       "Simulink Version" : "Simulink 10.6 (R2022b)",
       "Model Creation Date" : "07/04/2022 09:55",

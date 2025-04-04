@@ -1,0 +1,21 @@
+{
+  "version":"1.0",
+  "configuration":{
+    "signals":{
+      "inputs":[ {
+        "name":"PowerMgtState",
+        "width":64
+      } ],
+      "outputs":[ {
+        "name":"LEDFeedback(2)",
+        "folded":false
+      }, {
+        "name":"LEDFeedback(3)",
+        "folded":false
+      }, {
+        "name":"LEDFeedback(1)",
+        "folded":false
+      } ]
+    }
+  }
+}
