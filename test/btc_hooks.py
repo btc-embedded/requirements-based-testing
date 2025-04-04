@@ -30,13 +30,9 @@ def main(input_data) -> dict:
     return_data = {}
     
     if use_case == ARCHITECTURE_META_INFO:
-        try:
-            return_data["metaData"] = collect_architecture_metadata(meta_data)
-        except: pass
+        return_data["metaData"] = collect_architecture_metadata(meta_data)
     elif use_case == TESTING_META_INFO:
-        try:
-            return_data["metaData"] = collect_testing_metadata(meta_data)
-        except: pass
+        return_data["metaData"] = collect_testing_metadata(meta_data)
     
     return return_data
 
@@ -45,7 +41,7 @@ def collect_architecture_metadata(meta_data) -> dict:
     arch_metadata = {}
     if meta_data and 'BTC EmbeddedPlatform' in meta_data:
         meta_data = meta_data['BTC EmbeddedPlatform']
-        model_path = meta_data['Model File']
+        model_path = meta_data['TargetLink']['Model File']
 
         arch_metadata['Last change (Model)'] = get_last_change(model_path)
         tldd_path = model_path[:-4] + '.dd'

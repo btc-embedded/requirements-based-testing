@@ -25,6 +25,8 @@ jobs:
     # (1) --- Checkout the repository ---
     - name: Checkout files
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
     # (2) --- Run the tests ---
     - name: Run tests
