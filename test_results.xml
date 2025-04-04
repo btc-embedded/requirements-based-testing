@@ -1,2 +1,2 @@
 <?xml version='1.0' encoding='utf-8'?>
-<testsuites name="seat_heating_controller" tests="1" errors="0" failures="1" skipped="0" timestamp="2025-04-04T11:44:42.565363" time="12"><testsuite name="Requirements-based Tests SL MIL (Toplevel)" tests="1" errors="0" failures="1" skipped="0"><testcase name="testHeating"><failure /></testcase></testsuite></testsuites>
+<testsuites name="seat_heating_controller" tests="1" errors="0" failures="1" skipped="0" timestamp="2025-04-04T11:58:54.102516" time="12"><testsuite name="Requirements-based Tests SL MIL (Toplevel)" tests="1" errors="0" failures="1" skipped="0"><testcase name="testHeating"><failure /></testcase></testsuite></testsuites>
