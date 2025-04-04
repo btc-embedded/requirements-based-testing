@@ -1,0 +1,36 @@
+{
+  "Profile" : {
+    "Version" : "25.1p0",
+    "Creator" : "developer",
+    "Creation Date" : "4 Apr 2025, 23:09",
+    "Modifier" : "developer",
+    "Modification Date" : "4 Apr 2025, 23:10",
+    "Creation Tool Version" : "25.1p0",
+    "OS" : "Windows",
+    "Path" : "file:/E:/home/WindowsFolders/My%20Documents/GitHub/thabok/requirements-based-testing/test/activation_condition_check.epx"
+  },
+  "Compiler" : {
+    "Name" : "mingw64",
+    "Info" : "MinGW64 Compiler (C) (6.3.0)",
+    "Bitsize" : 64,
+    "Replaceable" : false,
+    "Default" : true
+  },
+  "Architectures" : {
+    "Simulink" : {
+      "Creator" : "developer",
+      "Import Date" : "04/04/2025 23:09",
+      "Matlab Version" : "Matlab 9.13 (R2022b)",
+      "Simulink Version" : "Simulink 10.6 (R2022b)",
+      "Model Creation Date" : "04/04/2025 23:09",
+      "Model Version" : "1.1",
+      "Model File" : "file:/E:/home/WindowsFolders/My%20Documents/GitHub/thabok/requirements-based-testing/model/Wrapper_activation_condition_check.slx",
+      "Init Script" : "",
+      "Additional Model Information" : "",
+      "Architecture" : "Simulink Top Level",
+      "Parameters" : "ON",
+      "Visibility" : "BLACK_BOX",
+      "Conversion Target" : "EC"
+    }
+  }
+}
