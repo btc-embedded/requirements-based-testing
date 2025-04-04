@@ -8,3 +8,5 @@ RTE_OK = 0;
 try
     seat_heating_control_defineIntEnumTypes
 end
+
+addpath(fileparts(fileparts(mfilename('fullpath'))));

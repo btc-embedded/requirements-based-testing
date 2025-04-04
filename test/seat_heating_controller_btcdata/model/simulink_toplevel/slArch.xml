@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sl:SimulinkArchitecture xmlns:sl="http://btc-es.de/ep/simulink/2014/12/09" modelVersion="8.11" modelPath="E:/home/WindowsFolders/My Documents/GitHub/thabok/requirements-based-testing/model/seat_heating_controller.slx" modelCreationDate="2022-04-07T09:55:28" creator="developer">
+	<toolInfo name="Matlab" release="(R2023b)" version="23.2" patchLevel="" />
+	<toolInfo name="Simulink" release="(R2023b)" version="23.2" patchLevel="" />
+	<model modelID="model001" modelKind="model" modelVersion="8.11" modelPath="E:/home/WindowsFolders/My Documents/GitHub/thabok/requirements-based-testing/model/seat_heating_controller.slx" creationDate="2022-04-07T09:55:28" modificationDate="2025-04-04T12:05:32">
+		<subsystem subsysID="ss1" physicalPath="seat_heating_controller" path="" sampleTime="0.2" name="seat_heating_controller" scopeKind="SUT" kind="subsystem">
+			<inport portNumber="1" name="SeatOccupied" physicalPath="seat_heating_controller/SeatOccupied" path="SeatOccupied">
+				<boolean />
+			</inport>
+			<inport portNumber="2" name="PowerMgtState" physicalPath="seat_heating_controller/PowerMgtState" path="PowerMgtState">
+				<enumType name="IDT_PowerState">
+					<enumElement name="NOK" value="0" />
+					<enumElement name="OK" value="1" />
+				</enumType>
+			</inport>
+			<inport portNumber="3" name="PowerMgtState_ErrorStatus" physicalPath="seat_heating_controller/PowerMgtState_ErrorStatus" path="PowerMgtState_ErrorStatus">
+				<double />
+			</inport>
+			<inport portNumber="4" name="Get_ButtonPressed" physicalPath="seat_heating_controller/Get_ButtonPressed" path="Get_ButtonPressed">
+				<double />
+			</inport>
+			<parameter name="TemperatureRanges_TemperatureStage1" path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/CPA_TemperatureRanges_TemperatureRanges" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/CPA_TemperatureRanges_TemperatureRanges" origin="explicit_param" workspace="TemperatureRanges_TemperatureStage1" initValue="30.0">
+				<double />
+				<usageContext path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/CPA_TemperatureRanges_TemperatureRanges" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/CPA_TemperatureRanges_TemperatureRanges" simulinkBlockType="Constant" blockAttribute="Value" />
+			</parameter>
+			<parameter name="TemperatureRanges_TemperatureStage2" path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/CPA_TemperatureRanges_TemperatureStage2" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/CPA_TemperatureRanges_TemperatureStage2" origin="explicit_param" workspace="TemperatureRanges_TemperatureStage2" initValue="35.0">
+				<double />
+				<usageContext path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/CPA_TemperatureRanges_TemperatureStage2" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/CPA_TemperatureRanges_TemperatureStage2" simulinkBlockType="Constant" blockAttribute="Value" />
+			</parameter>
+			<parameter name="TemperatureRanges_TemperatureStage3" path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/CPA_TemperatureRanges_TemperatureStage3" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/CPA_TemperatureRanges_TemperatureStage3" origin="explicit_param" workspace="TemperatureRanges_TemperatureStage3" initValue="45.0">
+				<double />
+				<usageContext path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/CPA_TemperatureRanges_TemperatureStage3" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/CPA_TemperatureRanges_TemperatureStage3" simulinkBlockType="Constant" blockAttribute="Value" />
+			</parameter>
+			<outport portNumber="1" name="LEDFeedback" physicalPath="seat_heating_controller/LEDFeedback" path="LEDFeedback">
+				<array size="3" startIndex="1">
+					<boolean />
+				</array>
+			</outport>
+			<outport portNumber="2" name="Set_CoilTemperature" physicalPath="seat_heating_controller/Set_CoilTemperature" path="Set_CoilTemperature">
+				<double />
+			</outport>
+		</subsystem>
+		<rootSystem refSubsysID="ss1" />
+	</model>
+	<root refModelID="model001" />
+</sl:SimulinkArchitecture>
