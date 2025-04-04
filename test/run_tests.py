@@ -24,6 +24,7 @@ def run_mil_tests_for_project(ep, project_file):
     report_dir = os.path.abspath('reports')
     print(f"\nTesting {project_name} (MIL)\n")
 
+    util.run_matlab_script(ep, os.path.abspath('model/init.m'))
     ep.get(f'profiles/{project_file}')
     scopes = ep.get('scopes')
     scope_uids = [scope['uid'] for scope in scopes]
@@ -231,7 +232,7 @@ def publish_results_to_polarion(ep):
     ep.post('test-case-source-sync', payload, message="Publishing test results to Polarion")
 
 def announce(message: str):
-    print(f"\n{'#' * 80}\n\n{message}\n\n{'#' * 80}")
+    print(f"\n{'#' * 80}\n\n{message}\n\n{'#' * 80}\n")
 
 if __name__ == '__main__':
     announce("Running tests on MIL")
