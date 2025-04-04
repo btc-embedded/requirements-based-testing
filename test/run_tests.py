@@ -104,7 +104,7 @@ def run_sil_tests():
     publish_results_to_polarion(ep)
 
     # Create project report
-    report = ep.post(f"scopes/{toplevel_scope_uid}/project-report?template-name=rbt-tl", message="Creating test report")
+    report = ep.post(f"scopes/{toplevel_scope_uid}/project-report?template-name=rbt-sil-only", message="Creating test report")
     # export project report to a file called 'report.html'
     ep.post(f"reports/{report['uid']}", { 'exportPath': report_dir, 'newName': 'report' })
 
