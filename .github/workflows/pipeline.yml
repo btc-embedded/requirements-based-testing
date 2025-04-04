@@ -55,7 +55,7 @@ jobs:
     - name: Add test report link to PR
       if: always() && github.event_name == 'pull_request'
       run: |
-        $REPORT_URL = "https://thabok.github.io/$env:GITHUB_REPOSITORY_NAME/report.html"
+        $REPORT_URL = "https://btc-embedded.github.io/$env:GITHUB_REPOSITORY_NAME/report.html"
         $API_URL = "https://api.github.com/repos/$env:GITHUB_REPOSITORY/issues/$env:GITHUB_EVENT_NUMBER/comments"
         $headers = @{
             "Authorization" = "Bearer $env:GITHUB_TOKEN"
