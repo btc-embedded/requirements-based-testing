@@ -689,7 +689,7 @@ li a {
  * @param {String} topic Id that will be scrolled to
  */
 function showPage(topicId) {
-  var topics = ["general","rbt","b2b",];
+  var topics = ["general","rbt",];
   for (var i = 0; i < topics.length; i++) {
     var topic = topics[i];
     var topicDiv = document.getElementById(topic);
@@ -754,7 +754,7 @@ function scrollToTargetAdjusted(id) {
  * It is NECESSARY to use this for combined target changes, so that the history reflects the singular action
  */
 function combinedShowTopicAndScroll(topicId, id) {
-  var topics = ["general","rbt","b2b",];
+  var topics = ["general","rbt",];
   for (var i = 0; i < topics.length; i++) {
     var topic = topics[i];
     var topicDiv = document.getElementById(topic);
@@ -856,9 +856,6 @@ function toggleSection(div_id, clickable_id ) {
                             <li onclick="expandSectionOnNavigation('general_metaInformation_div','general_metaInformation_section'); scrollToTargetAdjusted('general_metaInformation_section')">
                                 <a>Meta Information</a>
                             </li>
-                            <li onclick="expandSectionOnNavigation('general_messages_div','general_messages_section'); scrollToTargetAdjusted('general_messages_section')">
-                                <a>Messages</a>
-                            </li>
                 </ul>
             </div>
             <div id="sectionNavigation_rbt">
@@ -866,16 +863,18 @@ function toggleSection(div_id, clickable_id ) {
                             <li onclick="expandSectionOnNavigation('rbt_testExecution_div','rbt_testExecution_section'); scrollToTargetAdjusted('rbt_testExecution_section')">
                                 <a>Test Execution</a>
                             </li>
-                </ul>
-            </div>
-            <div id="sectionNavigation_b2b">
-                <ul class="sectionList">
+                            <li onclick="expandSectionOnNavigation('rbt_requirementTraceability_div','rbt_requirementTraceability_section'); scrollToTargetAdjusted('rbt_requirementTraceability_section')">
+                                <a>Requirements Traceability</a>
+                            </li>
+                            <li onclick="expandSectionOnNavigation('rbt_codeAnalysis_div','rbt_codeAnalysis_section'); scrollToTargetAdjusted('rbt_codeAnalysis_section')">
+                                <a>Code Analysis</a>
+                            </li>
                 </ul>
             </div>
         </div>
         <ul class="metainfo">
             <li><span>Creator:</span> developer</li>        
-            <li><span>Creation date:</span> 2025-04-02 12:53:29</li>     
+            <li><span>Creation date:</span> 2025-04-04 10:41:48</li>     
         </ul>
     </div>
 
@@ -891,8 +890,39 @@ function toggleSection(div_id, clickable_id ) {
                             <div class="topicOverviewSectionHeader">Test Execution</div>
                             <div class="topicOverviewSectionContent">
     <div class="statusContainer">
-        <div class="statusIcon ok-glyph"></div>
-    <a class="ok-color" onclick="combinedShowTopicAndScroll('rbt','rbt_testExecution_section');">All tests are passed</a>
+        <div class="statusIcon noexecution-glyph"></div>
+    <a class="noexecution-color" onclick="combinedShowTopicAndScroll('rbt','rbt_testExecution_section');">There are missing executions</a>
+    </div>
+                        </div>
+                    </div>
+                        <div class="topicOverviewSection">
+                            <div class="topicOverviewSectionHeader">Requirements Traceability</div>
+                            <div class="topicOverviewSectionContent">
+    <div class="statusContainer">
+        <div class="statusIcon error-glyph"></div>
+    <a class="error-color" onclick="combinedShowTopicAndScroll('rbt','rbt_requirementTraceability_section');">There are uncovered requirements</a>
+    </div>
+                        </div>
+                    </div>
+                        <div class="topicOverviewSection">
+                            <div class="topicOverviewSectionHeader">Code Analysis</div>
+                            <div class="topicOverviewSectionContent">
+
+
+
+
+    <div class="statusContainer">
+        <h5>Coverage (Handled)</h5>
+        <div class="coverageValue unknown-color">85.7%</div>
+        <div class="coverageLabel">MC/DC</div>
+    <a class="unknown-color" onclick="combinedShowTopicAndScroll('rbt','rbt_codeAnalysis_section');">There are unhandled goals</a>
+    </div>
+
+    <div class="statusContainer">
+        <h5>Robustness (Unreachables)</h5>
+        <div class="coverageValue -color">n/a</div>
+        <div class="coverageLabel">Division by Zero</div>
+    <a class="-color" onclick="combinedShowTopicAndScroll('rbt','rbt_codeAnalysis_section');"></a>
     </div>
                         </div>
                     </div>
@@ -909,31 +939,30 @@ function toggleSection(div_id, clickable_id ) {
         <a style="padding-left:16px;">
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHomAACAhAAA+gAAAIDo
         AAB1MAAA6mAAADqYAAAXcJy6UTwAAAAEZ0FNQQAAsY58+1GTAAAAAXNSR0IArs4c6QAAAAZiS0dE
-        AP8A/wD/oL2nkwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAZ5JREFUeNpjYCAVuPVXMjD8Z4RxWfCp
+        AP8A/wD/oL2nkwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAZlJREFUeNpjYCAVuPVXMjD8Z4RxWfCp
         5fadtpmFmUkGWezzj59abD7TVH5sYUgmaMDXH798unO8MMSnrTsR/sJn2vfvW7JyWAi5WF9FEkOs
-        N9ebO3/C5oRXPtO+MTFQCAi64OKd59i88PXNh28Lfm7JKgMbEBoayvzs2ZOi//8ZIoDBqwMUYjt6
-        7DgjNwfblpb5+zADkYVl5Y8t2TkgPiNY85Mne6ysrRwSk5IZVFRUGFhZWRkYgQBnNO4q6ABq/Q82
-        wMrKoszayrqzq7sHrubBgwcM1VWVDEuXLUfhL1u+AsNQFkagI0A2I4NDhw4y2NrZYfCBBoJtvXv3
-        LkNCXOzlI8eO64FiQV1eXh7FgIMHgBps7XDypaWlGYAmKYLYIANuPnz4EC754sULhrdv3zBoaWlh
-        5YPA/fv3QdQNsAH/Gf6vnj9vLsK5Bw8y2NjYMsDCEJ0PAiD1IH1gA6SlZXuPHT12oKy0hOH69esM
-        Bw8ewOr/379/g+VB6kDqQfrAsYCWDqKAAvowcTTwC+jvK0CHrJCSkulbvXr1XwZqAADzr7eE2JWX
-        2wAAAABJRU5ErkJggg=="/>
-            Inports: 3
+        N9ebO3/C5oRXPtO+wQ0IbQhl+yTClsXGxJb2+89vpR15SziICRKwAa6TI6S+MbEfkBERl7LUN+MW
+        FxFnABoAVnDxznNsXvj65sO3BT+3ZJWxgGz+DtRsqmOsaKFvhuIlbg62LS3z92EGIgvLyh9bsnPA
+        LvgoxJohJyohha4ZHIibs3yxReOPLVkdDAzZYC6j77TEa/5O3pqyEjJ4/fr4xROGFI0QRnRxpl9/
+        fytJCIsTDCyQGvfJMT8wDGCgEDCxMbPee/H2JUGFIDUgtRgG/Pzzc8aJS6e/EjIApAakFsMA/ne/
+        Z7x4/eLZiYun/uDUDJQDqQGpRZdjvnbg2l95T821L16/Cnj4/DEHHw8vGycHJ8Pff/8Ynr16zrDz
+        6J6vNx/cfvzr30+HzeWrPqAbwIgrKYPEWFlY7/3692sW35tf01Y3rP6FzXUAe/evPGi+Te4AAAAA
+        SUVORK5CYII="/>
+            Inputs: 4
         </a>
         <a style="padding-left:16px;">
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHomAACAhAAA+gAAAIDo
         AAB1MAAA6mAAADqYAAAXcJy6UTwAAAAEZ0FNQQAAsY58+1GTAAAAAXNSR0IArs4c6QAAAAZiS0dE
-        AP8A/wD/oL2nkwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAeVJREFUeNpjYCAK/GdkcOuvxCbDSIx2
+        AP8A/wD/oL2nkwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAZhJREFUeNpjYCAK/GdkcOuvxCbDSIx2
         Dp+pc3/9+RPDy8F+DVn8z99/TwgawOkzbYqEME9CVpAFN7pc6ZRtDCz4NLP7TOsSEeBK6M315ubh
-        ZMOqhomBQsCMT/Lvra27f8u5SR27/FBbTlyA7eW7LwzIePep25BADA0NZX727EnR//8MEUABHaAQ
-        2L3/Gf43HDt2ohFvIII1P3myx8rayiExKZlBRUWF4dWrVwxFhQUMK1etZti/f+8BJydnJwa3CRUM
-        uwrbMbwgIMBXam1tndrV3cMgKirKwMzMzLB3zx4GLi5uBisrKwZFRSUFe/u99gvrolNAGv79+/f/
-        65fPDYxM/38/fvzkMAsjA2MoyGZkcPLkSQZvb284X15e0SEuNub/wkWLwXyQ+uPHj8cCmW2gWFCX
-        l5eHK/79+zfDxYsXGAyNjOBiIBc5OTvD+QoKCqAAkoVF482HDx/CJa9cucygoKjIwMPDAxfbs2c3
-        g4uLK5wPVs/IcB1sADCkV8+fNxfF+WZmZnD+tWvXGPj5+RmkpaXhYiD1IH1gA6SlZXuPHT12oKy0
-        hOH69esMJ0+cABpgjmI7yPkgr4HkQepA6kH64JkJlg6AzChgWtBnxJ7Jfv0H+pCRkWGFlJRM3+rV
-        q/8yUAMAAB74xZ14cGk2AAAAAElFTkSuQmCC"/>
-            Outports: 1
+        ZMOqBm5AaEMo2ycRtiw2Jra0339+K+3IW8JBjPeYQYTr5Aipfzycp6REJf1dLB2lHM3tWZZ3zW/8
+        e2vr7t9yblLHLj/UlhMXYHv57gsDMt596jYDI8jm76JcV0x1jBUt9M1QvOQuYMFIMBDdJkXlyUnI
+        toW6BXJjcyLEEFA0Tqhg2FXYji7PxM7CnmGhZ8qNy487P5z4D4zt/9g0g9OB++SYH7kR6eysrKx4
+        A+v3798Mk1fM/LkzFzVwmRgoBExszKz3Xrx9SVAhSA1ILYYBP//8nHHi0umvhAwAqQGpxTCA/93v
+        GS9ev3h24uKpPzg1A+VAakBqMRLStQPX/sp7aq598fpVwMPnjzn4eHjZODk4Gf7++8fw7NVzhp1H
+        93y9+eD241//fjpsLl/1AWduRE/KIDFWFtZ7v/79msX35te01Q2rf2FzHQCewLc8FCgiSwAAAABJ
+        RU5ErkJggg=="/>
+            Outputs: 2
         </a>
         <a style="padding-left:16px;">
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHomAACAhAAA+gAAAIDo
@@ -945,7 +974,7 @@ function toggleSection(div_id, clickable_id ) {
         IRjqIDUgtRgGkAvgBnByMN+7/eQNQQ0gNSC1GAZ8+/57xvLdF78SMgCkBqQWw4DfvO9mgOJ5xe6L
         f3BpBsmB1IDUYqYDYLz+kvNYe/vx64Dzt59ziAlxs/FxczL8+fuP4frDlwz9K49+PXT+/mNwQtpc
         /oFqSXngAQBhNpAu8r39tQAAAABJRU5ErkJggg=="/>
-            Displays: 0
+            Locals: 1
         </a>
         <a style="padding-left:16px;">
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABIUlEQVR4Xs1SzUrDQBDOwXPFd1B7
@@ -955,7 +984,7 @@ function toggleSection(div_id, clickable_id ) {
         0TZA+LI/yb9zbdAQW13E4JW517x7cT2JGShaBojZQEfVINegZbCS9GCM6VSjxktZrocwn+iSyJzf
         xegnzClkUgfR+/uQJXkWwVxHVX3XYu2s38y8U1dEoEuy7BTEJNRuBhaOSXKGUqBScgAAAABJRU5E
         rkJggg=="/>
-            Calibrations: 1
+            Parameter: 3
         </a>
             </div>
         </div>
@@ -984,26 +1013,22 @@ function toggleSection(div_id, clickable_id ) {
             </tr>
             <tr>
                 <td>Profile Creation Date</td>
-                <td>2025-03-27 16:02:00</td>
+                <td>2025-04-04 10:40:52</td>
             </tr>
             <tr>
                 <td>Profile Modifier</td>
-                <td>developer</td>
+                <td></td>
             </tr>
             <tr>
                 <td>Profile Modification Date</td>
-                <td>2025-04-02 12:31:00</td>
-            </tr>
-            <tr>
-                <td>Profile Path</td>
-                <td>C:\actions-runner\_work\requirements-based-testing\requirements-based-testing\test\activation_condition_check.epx</td>
+                <td></td>
             </tr>
     </table>
 
 
     <h4>Architectures</h4>
-        <h5 class="collapsed anchored" onclick="toggleSection('Simulink_arch_table','Simulink_arch_header')" id="Simulink_arch_header">Simulink</h5>
-        <div class="hidden" id="Simulink_arch_table">
+        <h5 class="collapsed anchored" onclick="toggleSection('TargetLink_arch_table','TargetLink_arch_header')" id="TargetLink_arch_header">TargetLink</h5>
+        <div class="hidden" id="TargetLink_arch_table">
             <table class="table dualTable">
                 <tr>
                     <th>Property</th>
@@ -1015,7 +1040,7 @@ function toggleSection(div_id, clickable_id ) {
                 </tr>
                 <tr>
                     <td>Import Date</td>
-                    <td>2025-04-02 12:53:02</td>
+                    <td>2025-04-04 10:41:25</td>
                 </tr>
                 <tr>
                     <td>Matlab Version</td>
@@ -1026,39 +1051,113 @@ function toggleSection(div_id, clickable_id ) {
                     <td>Simulink 23.2 (R2023b)</td>
                 </tr>
                 <tr>
+                    <td>TargetLink Version</td>
+                    <td>TargetLink 23.1 p1</td>
+                </tr>
+                <tr>
                     <td>Model Creation Date</td>
-                    <td>2025-03-27 16:02:08</td>
+                    <td>2022-04-07 09:55:28</td>
                 </tr>
                 <tr>
                     <td>Model Version</td>
-                    <td>1.1</td>
+                    <td>8.8</td>
                 </tr>
                 <tr>
                     <td>Model File</td>
-                    <td>file:/C:/actions-runner/_work/requirements-based-testing/requirements-based-testing/model/Wrapper_activation_condition_check.slx</td>
+                    <td>file:/C:/actions-runner/_work/requirements-based-testing/requirements-based-testing/model/seat_heating_controller.slx</td>
                 </tr>
                 <tr>
                     <td>Init Script</td>
+                    <td>file:/C:/actions-runner/_work/requirements-based-testing/requirements-based-testing/model/init.m</td>
+                </tr>
+                <tr>
+                    <td>Environment File</td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td>Additional Model Information</td>
-                    <td></td>
+                    <td>Model Linking</td>
+                    <td>false</td>
                 </tr>
                 <tr>
-                    <td>Architecture</td>
-                    <td>Simulink Top Level</td>
+                    <td>Calibration Settings</td>
+                    <td>EXPLICIT_PARAM</td>
                 </tr>
                 <tr>
-                    <td>Parameters</td>
-                    <td>ON</td>
+                    <td>Reuse Existing Code</td>
+                    <td>false</td>
                 </tr>
                 <tr>
-                    <td>Visibility</td>
-                    <td>BLACK_BOX</td>
+                    <td>Test Mode</td>
+                    <td>GREY_BOX</td>
+                </tr>
+                <tr>
+                    <td>Adaptive AUTOSAR</td>
+                    <td>false</td>
                 </tr>
             </table>
-            <h6 class="collapsed anchored" onclick="toggleSection('Simulink_arch_table_ref','Simulink_arch_header_ref')" id="Simulink_arch_header_ref">Model Reference</h6>
+            <h6 class="collapsed anchored" onclick="toggleSection('TargetLink_arch_table_ref','TargetLink_arch_header_ref')" id="TargetLink_arch_header_ref">Model Reference</h6>
+        </div>
+        <h5 class="collapsed anchored" onclick="toggleSection('C-Code_arch_table','C-Code_arch_header')" id="C-Code_arch_header">C-Code</h5>
+        <div class="hidden" id="C-Code_arch_table">
+            <table class="table dualTable">
+                <tr>
+                    <th>Property</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Creator</td>
+                    <td>developer</td>
+                </tr>
+                <tr>
+                    <td>Import Date</td>
+                    <td>2025-04-04 10:41:26</td>
+                </tr>
+                <tr>
+                    <td>Matlab Version</td>
+                    <td>Matlab 23.2 (R2023b)</td>
+                </tr>
+                <tr>
+                    <td>Simulink Version</td>
+                    <td>Simulink 23.2 (R2023b)</td>
+                </tr>
+                <tr>
+                    <td>TargetLink Version</td>
+                    <td>TargetLink 23.1 p1</td>
+                </tr>
+                <tr>
+                    <td>Model Creation Date</td>
+                    <td>2022-04-07 09:55:28</td>
+                </tr>
+                <tr>
+                    <td>Model Version</td>
+                    <td>8.8</td>
+                </tr>
+                <tr>
+                    <td>Model File</td>
+                    <td>file:/C:/actions-runner/_work/requirements-based-testing/requirements-based-testing/model/seat_heating_controller.slx</td>
+                </tr>
+                <tr>
+                    <td>Init Script</td>
+                    <td>file:/C:/actions-runner/_work/requirements-based-testing/requirements-based-testing/model/init.m</td>
+                </tr>
+                <tr>
+                    <td>Environment File</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Host Compiler</td>
+                    <td>MinGW64 Compiler (C) (8.1.0)</td>
+                </tr>
+                <tr>
+                    <td>Compliance Mode</td>
+                    <td>C99</td>
+                </tr>
+                <tr>
+                    <td>Flush-to-Zero Status</td>
+                    <td>Deactivated</td>
+                </tr>
+            </table>
+            <h6 class="collapsed anchored" onclick="toggleSection('C-Code_arch_table_ref','C-Code_arch_header_ref')" id="C-Code_arch_header_ref">Model Reference</h6>
         </div>
     
     <h4>Constants</h4>
@@ -1091,12 +1190,21 @@ function toggleSection(div_id, clickable_id ) {
             </tr>
             <tr>
                 <td>Scope</td>
-                <td>Wrapper_activation_condition_check</td>
+                <td>seat_heating_controller</td>
             </tr>
+            <tr>
+                <td>Path</td>
+                <td>seat_heating_controller/Subsystem/seat_heating_controller</td>
+            </tr>
+                <tr>
+                    <td>Child Scopes</td>
+                    <td>
+                        activation_condition_check                    </td>
+                </tr>
     </table>
 <h4>Execution Modes</h4>
-    <h5 class="collapsed anchored" onclick="toggleSection('SL MIL (Toplevel)_config_table','SL MIL (Toplevel)_config_header')" id="SL MIL (Toplevel)_config_header">SL MIL (Toplevel)</h5>
-    <table class="table dualTable hidden" id="SL MIL (Toplevel)_config_table">
+    <h5 class="collapsed anchored" onclick="toggleSection('TL MIL_config_table','TL MIL_config_header')" id="TL MIL_config_header">TL MIL</h5>
+    <table class="table dualTable hidden" id="TL MIL_config_table">
         <tr>
             <th>Property</th>
             <th>Value</th>
@@ -1107,7 +1215,7 @@ function toggleSection(div_id, clickable_id ) {
         </tr>
         <tr>
             <td>Import Date</td>
-            <td>2025-04-02 12:53:02</td>
+            <td>2025-04-04 10:41:25</td>
         </tr>
         <tr>
             <td>Matlab Version</td>
@@ -1118,89 +1226,207 @@ function toggleSection(div_id, clickable_id ) {
             <td>Simulink 23.2 (R2023b)</td>
         </tr>
         <tr>
+            <td>TargetLink Version</td>
+            <td>TargetLink 23.1 p1</td>
+        </tr>
+        <tr>
             <td>Model Creation Date</td>
-            <td>2025-03-27 16:02:08</td>
+            <td>2022-04-07 09:55:28</td>
         </tr>
         <tr>
             <td>Model Version</td>
-            <td>1.1</td>
+            <td>8.8</td>
         </tr>
         <tr>
             <td>Model File</td>
-            <td>file:/C:/actions-runner/_work/requirements-based-testing/requirements-based-testing/model/Wrapper_activation_condition_check.slx</td>
+            <td>file:/C:/actions-runner/_work/requirements-based-testing/requirements-based-testing/model/seat_heating_controller.slx</td>
         </tr>
         <tr>
             <td>Init Script</td>
+            <td>file:/C:/actions-runner/_work/requirements-based-testing/requirements-based-testing/model/init.m</td>
+        </tr>
+        <tr>
+            <td>Environment File</td>
             <td></td>
         </tr>
         <tr>
-            <td>Additional Model Information</td>
-            <td></td>
+            <td>Model Linking</td>
+            <td>false</td>
         </tr>
         <tr>
-            <td>Architecture</td>
-            <td>Simulink Top Level</td>
+            <td>Calibration Settings</td>
+            <td>EXPLICIT_PARAM</td>
         </tr>
         <tr>
-            <td>Parameters</td>
-            <td>ON</td>
+            <td>Reuse Existing Code</td>
+            <td>false</td>
         </tr>
         <tr>
-            <td>Visibility</td>
-            <td>BLACK_BOX</td>
+            <td>Test Mode</td>
+            <td>GREY_BOX</td>
+        </tr>
+        <tr>
+            <td>Adaptive AUTOSAR</td>
+            <td>false</td>
         </tr>
     </table>
-            </div>
-        </div>
-        <div class="sectionPageDiv">
-            <h3 id="general_messages_section" onclick="toggleSection('general_messages_div','general_messages_section')" class="extended anchored">
-                3. Messages
-            </h3>
-            <div id="general_messages_div">
-      <table class="table">
+    <h5 class="collapsed anchored" onclick="toggleSection('SIL_config_table','SIL_config_header')" id="SIL_config_header">SIL</h5>
+    <table class="table dualTable hidden" id="SIL_config_table">
         <tr>
-          <th style="width:2%"></th>
-          <th style="width:70%">Message</th>
-          <th style="width:14%">Severity</th>
-          <th style="width:14%">Origin</th>
+            <th>Property</th>
+            <th>Value</th>
         </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Some report extensions are not included.</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>The Simulink property &quot;DefaultParameterBehavior&quot; is set to the value &quot;Tunable&quot; in the extraction model.</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Test Case &#39;condition_check&#39; has been successfully imported from &#39;file:/C:/actions-runner/_work/requirements-based-testing/requirements-based-testing/test/activation_condition_check_btcdata/testcases/condition_check.tc.json&#39;</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Simulink architecture &quot;Wrapper_activation_condition_check&quot; has successfully been imported.</td>
-              <td>Information</td>
-              <td>Wrapper_activation_condition_check</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Default Compiler has been set to MinGW 64 Compiler (C) (8.1.0)</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="CRITICAL_ICON"></td>
-              <td>Default Compiler has been changed from MinGW64 Compiler (C) (8.1.0) to MinGW 64 Compiler (C) (8.1.0)</td>
-              <td>Critical</td>
-              <td></td>
-            </tr>
-      </table>
+        <tr>
+            <td>Creator</td>
+            <td>developer</td>
+        </tr>
+        <tr>
+            <td>Import Date</td>
+            <td>2025-04-04 10:41:26</td>
+        </tr>
+        <tr>
+            <td>Matlab Version</td>
+            <td>Matlab 23.2 (R2023b)</td>
+        </tr>
+        <tr>
+            <td>Simulink Version</td>
+            <td>Simulink 23.2 (R2023b)</td>
+        </tr>
+        <tr>
+            <td>TargetLink Version</td>
+            <td>TargetLink 23.1 p1</td>
+        </tr>
+        <tr>
+            <td>Model Creation Date</td>
+            <td>2022-04-07 09:55:28</td>
+        </tr>
+        <tr>
+            <td>Model Version</td>
+            <td>8.8</td>
+        </tr>
+        <tr>
+            <td>Model File</td>
+            <td>file:/C:/actions-runner/_work/requirements-based-testing/requirements-based-testing/model/seat_heating_controller.slx</td>
+        </tr>
+        <tr>
+            <td>Init Script</td>
+            <td>file:/C:/actions-runner/_work/requirements-based-testing/requirements-based-testing/model/init.m</td>
+        </tr>
+        <tr>
+            <td>Environment File</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Host Compiler</td>
+            <td>MinGW64 Compiler (C) (8.1.0)</td>
+        </tr>
+        <tr>
+            <td>Compliance Mode</td>
+            <td>C99</td>
+        </tr>
+        <tr>
+            <td>Flush-to-Zero Status</td>
+            <td>Deactivated</td>
+        </tr>
+    </table>
+        <h4>Natural Language Requirements</h4>
+            <h5 class="collapsed anchored" onclick="toggleSection('2H5_req_table','2H5_req_header')" id="2H5_req_header">shc</h5>
+              <div class="hidden" id="2H5_req_table">         
+                <table class="table dualTable">
+                        <tr>
+                            <th>Property</th>
+                            <th>Value</th>
+                        </tr>
+                        <tr>
+                            <td>Baseline Name</td>
+                            <td>Head / Current</td>
+                        </tr>
+                        <tr>
+                            <td>Baseline Revision</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td>Description column</td>
+                            <td>Description</td>
+                        </tr>
+                        <tr>
+                            <td>Host</td>
+                            <td>http://polarion03.prom.local</td>
+                        </tr>
+                        <tr>
+                            <td>Last import date</td>
+                            <td>2025-04-04</td>
+                        </tr>
+                        <tr>
+                            <td>Name column</td>
+                            <td>Title</td>
+                        </tr>
+                        <tr>
+                            <td>Port</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>Project URL</td>
+                            <td>http://polarion03.prom.local/polarion/redirect/project/shc</td>
+                        </tr>
+                        <tr>
+                            <td>Work Item Types</td>
+                            <td>Requirement, Test Case, Feature, Variant</td>
+                        </tr>
+                </table> 
+              </div>
+        <h4>Test Case Specifications</h4>
+            <h5 class="collapsed anchored" onclick="toggleSection('shc_testCase_table','shc_testCase_header')" id="shc_testCase_header">shc</h5>
+            <table class="table dualTable hidden" id="shc_testCase_table">
+                <tr>
+                    <th>Property</th>
+                    <th>Value</th>
+                </tr>
+                    <tr>
+                        <td>Consider Step Comments</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>Draft</td>
+                        <td>false</td>
+                    </tr>
+                    <tr>
+                        <td>Execution Modes</td>
+                        <td>SIL</td>
+                    </tr>
+                    <tr>
+                        <td>Folder</td>
+                        <td>Default Test Cases</td>
+                    </tr>
+                    <tr>
+                        <td>Host</td>
+                        <td>http://polarion03.prom.local</td>
+                    </tr>
+                    <tr>
+                        <td>Linked Requirement Role</td>
+                        <td>verifies</td>
+                    </tr>
+                    <tr>
+                        <td>Port</td>
+                        <td>80</td>
+                    </tr>
+                    <tr>
+                        <td>Project ID</td>
+                        <td>shc</td>
+                    </tr>
+                    <tr>
+                        <td>Project URL</td>
+                        <td>http://polarion03.prom.local/polarion/redirect/project/shc</td>
+                    </tr>
+                    <tr>
+                        <td>Scope</td>
+                        <td>seat_heating_controller</td>
+                    </tr>
+                    <tr>
+                        <td>Work Item Types</td>
+                        <td>Test Case</td>
+                    </tr>
+            </table>
             </div>
         </div>
     </div>
@@ -1215,12 +1441,35 @@ function toggleSection(div_id, clickable_id ) {
     <tr>
     <td>
     <span style="padding-right: 15px;">
-          SL MIL (Toplevel):</span>
+          TL MIL:</span>
           </td>
           <td style="min-width:300px">
       <div class="bar-chart">
         <div class="chart">
-    <div class="okBar bar size-1" style="flex-grow : 1"></div>
+    <div class="okBar bar size-0" style="flex-grow : 0"></div>
+    <div class="warningBar bar size-0" style="flex-grow : 0"></div>
+    <div class="errorBar bar size-0" style="flex-grow : 0"></div>
+    <div class="unknownBar bar size-2" style="flex-grow : 2"></div>
+    <div class="errorBar bar size-0" style="flex-grow : 0"></div>
+    <div class="unknownBar bar size-0" style="flex-grow : 0"></div>
+        </div>
+      </div>
+      </td>
+      <td>
+      <span style="padding-left: 15px;">
+          0% Passed
+        </span>
+      </td>
+      </tr>
+    <tr>
+    <td>
+    <span style="padding-right: 15px;">
+          SIL:</span>
+          </td>
+          <td style="min-width:300px">
+      <div class="bar-chart">
+        <div class="chart">
+    <div class="okBar bar size-2" style="flex-grow : 2"></div>
     <div class="warningBar bar size-0" style="flex-grow : 0"></div>
     <div class="errorBar bar size-0" style="flex-grow : 0"></div>
     <div class="unknownBar bar size-0" style="flex-grow : 0"></div>
@@ -1237,6 +1486,112 @@ function toggleSection(div_id, clickable_id ) {
       </tr>
     </table>
             </div>
+            <div class="sectionDiv">
+                <a class="viewDetails" onclick="expandSectionOnNavigation('rbt_requirementTraceability_div',' rbt_requirementTraceability_section'); scrollToTargetAdjusted('rbt_requirementTraceability_section')">View Details</a>
+                <h3>Requirements Traceability</h3>
+<div style="display:flex; text-align:center;">
+    <div>    <div class="sc-gauge">
+        <div class="sc-background">
+            <div class="sc-percentage covered" style="transform:rotate(135deg)"></div>
+            <div class="sc-mask"></div>
+            <span class="sc-value">75%</span>
+        </div>
+    <span style="font-size:14px;">Informal Requirement Coverage</span>
+    </div>
+</div>
+    <div style="flex-grow:2">
+    <table>
+            <tr>
+              <td><span style="padding-right: 15px;">TL MIL:</span>
+              </td>
+              <td style="min-width:200px">
+                <div class="bar-chart">
+                    
+                    <div class="chart">
+    <div class="okBar bar size-0" style="flex-grow : 0"></div>
+    <div class="unknownBar bar size-1" style="flex-grow : 1"></div>
+    <div class="warningBar bar size-0" style="flex-grow : 0"></div>
+    <div class="errorBar bar size-0" style="flex-grow : 0"></div>
+    <div class="errorBar bar size-0" style="flex-grow : 0"></div>
+    <div class="unknownBar bar size-0" style="flex-grow : 0"></div>
+                    </div>
+                    
+                </div>
+                </td>
+                <td><span style="padding-left: 15px;">0% Passed</span>
+                </td>
+              </tr>
+            <tr>
+              <td><span style="padding-right: 15px;">SIL:</span>
+              </td>
+              <td style="min-width:200px">
+                <div class="bar-chart">
+                    
+                    <div class="chart">
+    <div class="okBar bar size-1" style="flex-grow : 1"></div>
+    <div class="unknownBar bar size-0" style="flex-grow : 0"></div>
+    <div class="warningBar bar size-0" style="flex-grow : 0"></div>
+    <div class="errorBar bar size-0" style="flex-grow : 0"></div>
+    <div class="errorBar bar size-0" style="flex-grow : 0"></div>
+    <div class="unknownBar bar size-0" style="flex-grow : 0"></div>
+                    </div>
+                    
+                </div>
+                </td>
+                <td><span style="padding-left: 15px;">100% Passed</span>
+                </td>
+              </tr>
+            
+      </table>
+      <div style="padding-top:12px">Linked Test Case Results</div>
+    </div>
+</div>
+            </div>
+            <div class="sectionDiv">
+                <a class="viewDetails" onclick="expandSectionOnNavigation('rbt_codeAnalysis_div',' rbt_codeAnalysis_section'); scrollToTargetAdjusted('rbt_codeAnalysis_section')">View Details</a>
+                <h3>Code Analysis</h3>
+                    <div style="display:flex; justify-content:center;">
+    <div>
+    <div class="sc-gauge">
+        <div class="sc-background">
+            <div class="sc-percentage unreachable_blue" style="transform:rotate(157.925deg)"></div>
+            <div class="sc-percentage justified_green" style="transform:rotate(157.925deg)"></div>
+            <div class="sc-percentage covered" style="transform:rotate(157.925deg)"></div>
+            <div class="sc-mask"></div>
+            <span class="sc-value">87.7%</span>
+        </div>
+    <span style="font-size:14px;">Code Coverage (Handled Rate)</span>
+    </div>
+    </div>
+
+  <div>
+    <div class="sc-gauge">
+        <div class="sc-background">
+            <div class="sc-percentage unreachable_blue" style="transform:rotate(0deg)"></div>
+            <div class="sc-percentage justified_green" style="transform:rotate(0deg)"></div>
+            <div class="sc-percentage covered" style="transform:rotate(0deg)"></div>
+            <div class="sc-mask"></div>
+            <span class="sc-value">0%</span>
+        </div>
+    <span style="font-size:14px;">Robustness Checks (Handled Rate)</span>
+    </div>
+  </div>
+    <div class="sc-gauge">
+        <div class="sc-background" >
+        <div class="sc-mask"></div>
+            <span class="sc-value">n/a</span>
+        </div>
+    <span style="font-size:14px;">Domain Checks (Handled Rate)</span>
+    </div>
+    <div class="sc-gauge">
+        <div class="sc-background" >
+        <div class="sc-mask"></div>
+            <span class="sc-value">n/a</span>
+        </div>
+    <span style="font-size:14px;">User-defined Coverage (Handled Rate)</span>
+    </div>
+                    </div>
+            </div>
     </div>
         <!-- Page Sections -->
         <h2 style="padding-left:20px;">Requirement-based Testing</h2>
@@ -1248,7 +1603,188 @@ function toggleSection(div_id, clickable_id ) {
     <h4 class="anchored collapsed" onclick="toggleSection('testExecution_globalTolerances','testExecution_globalTolerances_header')" id="testExecution_globalTolerances_header">Global Tolerances </h4>
     <div class="hidden" id="testExecution_globalTolerances">
           <h5>
-            Wrapper_activation_condition_check
+            seat_heating_controller
+          </h5>
+            <table class="table">
+              <tr>
+                <th>Check</th>
+                <th>Name</th>
+                <th>Kind</th>
+                <th>Data type</th>
+                <th>Resolution</th>
+                <th>Offset</th>
+                <th>Relative tolerance [%]
+                </th>
+                <th>Absolute tolerance [Unit]
+                </th>
+                <th>Lead tolerance [s]
+                </th>
+                <th>Lag tolerance [s]
+                </th>
+              </tr>
+                <tr>
+                  <td style="text-align:center">
+                        <div class="ok-glyph ok-color"></div>
+                  </td>
+                  <td width="*">
+                    LEDFeedback(1)
+                  </td>
+                  <td>
+                    Output
+                  </td>
+                  <td>
+                    Bool
+                  </td>
+                  <td>
+                    2^0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:center">
+                        <div class="ok-glyph ok-color"></div>
+                  </td>
+                  <td width="*">
+                    LEDFeedback(2)
+                  </td>
+                  <td>
+                    Output
+                  </td>
+                  <td>
+                    Bool
+                  </td>
+                  <td>
+                    2^0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:center">
+                        <div class="ok-glyph ok-color"></div>
+                  </td>
+                  <td width="*">
+                    LEDFeedback(3)
+                  </td>
+                  <td>
+                    Output
+                  </td>
+                  <td>
+                    Bool
+                  </td>
+                  <td>
+                    2^0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:center">
+                        <div class="ok-glyph ok-color"></div>
+                  </td>
+                  <td width="*">
+                    Set_CoilTemperature
+                  </td>
+                  <td>
+                    Output
+                  </td>
+                  <td>
+                    UInt8
+                  </td>
+                  <td>
+                    1.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:center">
+                        <div class="ok-glyph ok-color"></div>
+                  </td>
+                  <td width="*">
+                    activation_conditions_met
+                  </td>
+                  <td>
+                    Local
+                  </td>
+                  <td>
+                    Bool
+                  </td>
+                  <td>
+                    2^0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                </tr>
+            </table>
+          <h5>
+            activation_condition_check
           </h5>
             <table class="table">
               <tr>
@@ -1278,7 +1814,39 @@ function toggleSection(div_id, clickable_id ) {
                     Output
                   </td>
                   <td>
-                    boolean
+                    Bool
+                  </td>
+                  <td>
+                    2^0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:center">
+                        <div class="ok-glyph ok-color"></div>
+                  </td>
+                  <td width="*">
+                    activation_conditions_met
+                  </td>
+                  <td>
+                    Local
+                  </td>
+                  <td>
+                    Bool
                   </td>
                   <td>
                     2^0
@@ -1312,7 +1880,8 @@ function toggleSection(div_id, clickable_id ) {
             <th>Requirement (report base)</th>
             <th>Scope</th>
             <th>Folder</th>
-              <th>Result (SL MIL (Toplevel))</th>
+              <th>Result (TL MIL)</th>
+              <th>Result (SIL)</th>
           </tr>
 
 
@@ -1321,23 +1890,142 @@ function toggleSection(div_id, clickable_id ) {
               <td style="text-align:center">
         
 
-    <span class="icon-sdc" title="No problems during simulation"></span>
+        
+
+            <span class="icon-mc" title="Missing simulation"></span>
+        
               </td>
               <td>
     
     condition_check
               </td>
               <td>
-                8
+                1
               </td>
               <td>
               </td>
               <td>
-                Wrapper_activation_condition_check
+                activation_condition_check
               </td>
               <td>
                 Default Test Cases
               </td>
+                  <td>
+                    <div class="        noexecution-glyph noexecution-color
+">
+                      Missing Execution
+                    </div>
+                  </td>
+                  <td>
+                    <div class="        ok-glyph ok-color
+">
+                      Passed
+                    </div>
+                  </td>
+            </tr>
+          
+            <tr>
+              <td style="text-align:center">
+        
+
+        
+
+            <span class="icon-mc" title="Missing simulation"></span>
+        
+              </td>
+              <td>
+    
+    testHeating
+              </td>
+              <td>
+                9
+              </td>
+              <td>
+        <a class="link" onclick="scrollToTargetAdjusted('2GY_req');">
+    <i>
+      1 - Stage 1
+    </i>
+        </a>
+    <br>
+        <a class="link" onclick="scrollToTargetAdjusted('2Ge_req');">
+    <i>
+      2 - Stage 2
+    </i>
+        </a>
+    <br>
+        <a class="link" onclick="scrollToTargetAdjusted('2Gm_req');">
+    <i>
+      3 - Stage 3
+    </i>
+        </a>
+    <br>
+        <a class="link" onclick="scrollToTargetAdjusted('2Gu_req');">
+    <i>
+      4 - Turn Off
+    </i>
+        </a>
+    <br>
+        <a class="link" onclick="scrollToTargetAdjusted('2Gc_req');">
+      Stage1_LEDFeedback
+        </a>
+    <br>
+        <a class="link" onclick="scrollToTargetAdjusted('2G^_req');">
+      Stage1_Request
+        </a>
+    <br>
+        <a class="link" onclick="scrollToTargetAdjusted('2Ga_req');">
+      Stage1_TempValue
+        </a>
+    <br>
+        <a class="link" onclick="scrollToTargetAdjusted('2Gk_req');">
+      Stage2_LEDFeedback
+        </a>
+    <br>
+        <a class="link" onclick="scrollToTargetAdjusted('2Gg_req');">
+      Stage2_Request
+        </a>
+    <br>
+        <a class="link" onclick="scrollToTargetAdjusted('2Gi_req');">
+      Stage2_TempValue
+        </a>
+    <br>
+        <a class="link" onclick="scrollToTargetAdjusted('2Gs_req');">
+      Stage3_LEDFeedback
+        </a>
+    <br>
+        <a class="link" onclick="scrollToTargetAdjusted('2Go_req');">
+      Stage3_Request
+        </a>
+    <br>
+        <a class="link" onclick="scrollToTargetAdjusted('2Gq_req');">
+      Stage3_TempValue
+        </a>
+    <br>
+        <a class="link" onclick="scrollToTargetAdjusted('2H0_req');">
+      TurnOff_LEDFeedback
+        </a>
+    <br>
+        <a class="link" onclick="scrollToTargetAdjusted('2Gw_req');">
+      TurnOff_Request
+        </a>
+    <br>
+        <a class="link" onclick="scrollToTargetAdjusted('2Gy_req');">
+      TurnOff_Value
+        </a>
+    <br>
+              </td>
+              <td>
+                seat_heating_controller
+              </td>
+              <td>
+                Default Test Cases
+              </td>
+                  <td>
+                    <div class="        noexecution-glyph noexecution-color
+">
+                      Missing Execution
+                    </div>
+                  </td>
                   <td>
                     <div class="        ok-glyph ok-color
 ">
@@ -1355,12 +2043,571 @@ function toggleSection(div_id, clickable_id ) {
   </div>
             </div>
         </div>
-    </div>
-    <!-- Page: b2b -->
-    <div class="overviewDiv" id="b2b">
-    <!-- Page Overview -->
-    <div class="topicOverviewDiv">
-    </div>
+        <div class="sectionPageDiv">
+            <h3 id="rbt_requirementTraceability_section" onclick="toggleSection('rbt_requirementTraceability_div','rbt_requirementTraceability_section')" class="extended anchored">
+                2. Requirements Traceability
+            </h3>
+            <div id="rbt_requirementTraceability_div">
+  <h4>shc</h4>
+  <table class="table">
+  <tr>
+    <th>Requirement ID</th> 
+    <th>Description</th>
+    <th>Test Cases</th>
+    <th>Covered</th>
+    <th >Passed (TL MIL)</th>
+    <th >Passed (SIL)</th>
+  </tr>
+  <tr id="2GW_req">
+    <td>        0 - CondCheck
+</td>
+    <td>The seat heating shall be enabled only if the seat is occupied, there&#39;s no error and the power management state reads OK. New Info!!!!
+  </td>
+    <td>0</td>
+<td>
+    <div class="error-glyph error-color">Not covered
+</div>
+</td>
+    <td>        n.a.
+</td>
+    <td>        n.a.
+</td>
+  </tr>
+  <tr id="2GY_req">
+    <td>        <i>1 - Stage 1</i>
+</td>
+    <td></td>
+    <td>1</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        0%
+</td>
+    <td>        100%
+</td>
+  </tr>
+  <tr id="2Ge_req">
+    <td>        <i>2 - Stage 2</i>
+</td>
+    <td></td>
+    <td>1</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        0%
+</td>
+    <td>        100%
+</td>
+  </tr>
+  <tr id="2Gm_req">
+    <td>        <i>3 - Stage 3</i>
+</td>
+    <td></td>
+    <td>1</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        0%
+</td>
+    <td>        100%
+</td>
+  </tr>
+  <tr id="2Gu_req">
+    <td>        <i>4 - Turn Off</i>
+</td>
+    <td></td>
+    <td>1</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        0%
+</td>
+    <td>        100%
+</td>
+  </tr>
+  <tr id="2GQ_req">
+    <td>        First alternative Sub-Feature
+</td>
+    <td>Exactly one of the alternative sub-features must be included if parent is included.</td>
+    <td>0</td>
+<td>
+    <div class="error-glyph error-color">Not covered
+</div>
+</td>
+    <td>        n.a.
+</td>
+    <td>        n.a.
+</td>
+  </tr>
+  <tr id="2GU_req">
+    <td>        Sample Variant
+</td>
+    <td>This is the description of a Sample Variant</td>
+    <td>0</td>
+<td>
+    <div class="error-glyph error-color">Not covered
+</div>
+</td>
+    <td>        n.a.
+</td>
+    <td>        n.a.
+</td>
+  </tr>
+  <tr id="2GO_req">
+    <td>        <i>Sample mandatory Feature with two alternatives</i>
+</td>
+    <td>This feature must be included in every product.</td>
+    <td>0</td>
+<td>
+    <div class="error-glyph error-color">Not covered
+</div>
+</td>
+    <td>        n.a.
+</td>
+    <td>        n.a.
+</td>
+  </tr>
+  <tr id="2GS_req">
+    <td>        Second alternative Sub-Feature
+</td>
+    <td>Exactly one of the alternative sub-features must be included if parent is included.</td>
+    <td>0</td>
+<td>
+    <div class="error-glyph error-color">Not covered
+</div>
+</td>
+    <td>        n.a.
+</td>
+    <td>        n.a.
+</td>
+  </tr>
+  <tr id="2Gc_req">
+    <td>        Stage1_LEDFeedback
+</td>
+    <td>If the first temperature stage (high) request is transmitted, all LEDs shall be turned on (1-1-1).</td>
+    <td>1</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        0%
+</td>
+    <td>        100%
+</td>
+  </tr>
+  <tr id="2G^_req">
+    <td>        Stage1_Request
+</td>
+    <td>If the heat button is pressed once while the activation conditions are fulfilled, the controller shall request the high temperature stage. Thabo/Matthias wills wissen!</td>
+    <td>1</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        0%
+</td>
+    <td>        100%
+</td>
+  </tr>
+  <tr id="2Ga_req">
+    <td>        Stage1_TempValue
+</td>
+    <td>The first temperature stage (high) request shall be transmitted to the heating actuaor as a calibratable temperature value &quot;params.high&quot;</td>
+    <td>1</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        0%
+</td>
+    <td>        100%
+</td>
+  </tr>
+  <tr id="2Gk_req">
+    <td>        Stage2_LEDFeedback
+</td>
+    <td>If the second temperature stage (medium) request is transmitted, the LED1 and LED2 shall be turned on.</td>
+    <td>1</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        0%
+</td>
+    <td>        100%
+</td>
+  </tr>
+  <tr id="2Gg_req">
+    <td>        Stage2_Request
+</td>
+    <td>If the heat button is pressed twice while the activation condtions are fulfilled, the controller shall request the medium temperature stage.</td>
+    <td>1</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        0%
+</td>
+    <td>        100%
+</td>
+  </tr>
+  <tr id="2Gi_req">
+    <td>        Stage2_TempValue
+</td>
+    <td>The second temperature stage request shall be transmitted to the heating actuaor as a calibratable temperature value &quot;params.medium&quot;</td>
+    <td>1</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        0%
+</td>
+    <td>        100%
+</td>
+  </tr>
+  <tr id="2Gs_req">
+    <td>        Stage3_LEDFeedback
+</td>
+    <td>If the third temperature stage (low) request is transmitted, the LED1 shall be active while LED2 and LED3 shall be turned off.</td>
+    <td>1</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        0%
+</td>
+    <td>        100%
+</td>
+  </tr>
+  <tr id="2Go_req">
+    <td>        Stage3_Request
+</td>
+    <td>If the heat button is pressed three times while the activation condtions are fulfilled, the controller shall request the low temperature stage.</td>
+    <td>1</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        0%
+</td>
+    <td>        100%
+</td>
+  </tr>
+  <tr id="2Gq_req">
+    <td>        Stage3_TempValue
+</td>
+    <td>The third temperature stage (low) request shall be transmitted to the heating actuaor as a calibratable temperature value &quot;params.low&quot;</td>
+    <td>1</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        0%
+</td>
+    <td>        100%
+</td>
+  </tr>
+  <tr id="2H0_req">
+    <td>        TurnOff_LEDFeedback
+</td>
+    <td>If the trun-off request is transmitted, all LEDs shall be turned off</td>
+    <td>1</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        0%
+</td>
+    <td>        100%
+</td>
+  </tr>
+  <tr id="2Gw_req">
+    <td>        TurnOff_Request
+</td>
+    <td>If the heat button is pressed four times while the activation condtions are fulfilled, the controller shall request a temperature turn-off stage (temperature=0°C)
+  
+  new</td>
+    <td>1</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        0%
+</td>
+    <td>        100%
+</td>
+  </tr>
+  <tr id="2Gy_req">
+    <td>        TurnOff_Value
+</td>
+    <td>The trun-off request shall be transmitted to the heating actuaor as a temperature value equal to 0°C</td>
+    <td>1</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        0%
+</td>
+    <td>        100%
+</td>
+  </tr>
+</table>
+            </div>
+        </div>
+        <div class="sectionPageDiv">
+            <h3 id="rbt_codeAnalysis_section" onclick="toggleSection('rbt_codeAnalysis_div','rbt_codeAnalysis_section')" class="extended anchored">
+                3. Code Analysis
+            </h3>
+            <div id="rbt_codeAnalysis_div">
+
+<h4 class="anchored extended" onclick="toggleSection('Code Coverage Statistics_id_104010_table','Code Coverage Statistics_id_104010_header')" id="Code Coverage Statistics_id_104010_header">Code Coverage Statistics</h4>
+<table class="table coverage-table coverage-table-sizing" id="Code Coverage Statistics_id_104010_table">
+  <tr>
+    <th></th>
+    <th>Properties</th>
+    <th colspan="2">Handled</th>
+    <th colspan="2">Covered</th>
+    <th colspan="2">Unreachable (n/inf)</th>
+    <th colspan="2">Justified</th>
+  </tr>
+  
+  <tr>
+    <td>Statement (STM)</td>
+    <td>36</td>
+    <td>36</td>
+    <td>100.0%</td>
+    <td>36</td>
+    <td>100.0%</td>
+    <td>0</td>
+    <td>0.0%</td>
+    <td>0</td>
+    <td>0.0%</td>
+  </tr>
+  
+  
+  <tr>
+    <td>Decision/Branch (D)</td>
+    <td>14</td>
+    <td>12</td>
+    <td>85.7%</td>
+    <td>12</td>
+    <td>85.7%</td>
+    <td>0</td>
+    <td>0.0%</td>
+    <td>0</td>
+    <td>0.0%</td>
+  </tr>
+  
+  
+  <tr>
+    <td>Condition (C)</td>
+    <td>20</td>
+    <td>16</td>
+    <td>80.0%</td>
+    <td>16</td>
+    <td>80.0%</td>
+    <td>0</td>
+    <td>0.0%</td>
+    <td>0</td>
+    <td>0.0%</td>
+  </tr>
+  
+  
+  <tr>
+    <td>C/DC and MC/DC (MCDC)</td>
+    <td>42</td>
+    <td>36</td>
+    <td>85.7%</td>
+    <td>36</td>
+    <td>85.7%</td>
+    <td>0</td>
+    <td>0.0%</td>
+    <td>0</td>
+    <td>0.0%</td>
+  </tr>
+  
+  
+  <tr>
+    <td>Function (F)</td>
+    <td>4</td>
+    <td>4</td>
+    <td>100.0%</td>
+    <td>4</td>
+    <td>100.0%</td>
+    <td>0</td>
+    <td>0.0%</td>
+    <td>0</td>
+    <td>0.0%</td>
+  </tr>
+  
+  
+  <tr>
+    <td>Function Call (FC)</td>
+    <td>3</td>
+    <td>3</td>
+    <td>100.0%</td>
+    <td>3</td>
+    <td>100.0%</td>
+    <td>0</td>
+    <td>0.0%</td>
+    <td>0</td>
+    <td>0.0%</td>
+  </tr>
+  
+  
+  <tr>
+    <td>Switch-Case (SC)</td>
+    <td>4</td>
+    <td>4</td>
+    <td>100.0%</td>
+    <td>4</td>
+    <td>100.0%</td>
+    <td>0</td>
+    <td>0.0%</td>
+    <td>0</td>
+    <td>0.0%</td>
+  </tr>
+  
+  
+  <tr>
+    <td>Relational Operator (RO)</td>
+    <td>25</td>
+    <td>18</td>
+    <td>72.0%</td>
+    <td>18</td>
+    <td>72.0%</td>
+    <td>0</td>
+    <td>0.0%</td>
+    <td>0</td>
+    <td>0.0%</td>
+  </tr>
+  
+</table>
+
+
+
+<h4 class="anchored extended" onclick="toggleSection('Robustness Checks Statistics_id_104010_table','Robustness Checks Statistics_id_104010_header')" id="Robustness Checks Statistics_id_104010_header">Robustness Checks Statistics</h4>
+<table class="table coverage-table coverage-table-sizing" id="Robustness Checks Statistics_id_104010_table">
+  <tr>
+    <th></th>
+    <th>Properties</th>
+    <th colspan="2">Handled</th>
+    <th colspan="2">Covered</th>
+    <th colspan="2">Unreachable (n/inf)</th>
+    <th colspan="2">Justified</th>
+  </tr>
+  
+  <tr>
+    <td>Division By Zero (DZ)</td>
+    <td>0</td>
+    <td>0</td>
+    <td>n/a</td>
+    <td>0</td>
+    <td>n/a</td>
+    <td>0</td>
+    <td>n/a</td>
+    <td>0</td>
+    <td>n/a</td>
+  </tr>
+  
+  
+  <tr>
+    <td>Downcast (CA)</td>
+    <td>6</td>
+    <td>0</td>
+    <td>0.0%</td>
+    <td>0</td>
+    <td>0.0%</td>
+    <td>0</td>
+    <td>0.0%</td>
+    <td>0</td>
+    <td>0.0%</td>
+  </tr>
+  
+  
+  <tr>
+    <td>Array out of Bounds (AOB)</td>
+    <td>3</td>
+    <td>0</td>
+    <td>0.0%</td>
+    <td>0</td>
+    <td>0.0%</td>
+    <td>0</td>
+    <td>0.0%</td>
+    <td>0</td>
+    <td>0.0%</td>
+  </tr>
+  
+</table>
+
+
+  <h4 class="anchored extended" onclick="toggleSection('DC_id_104020_stats','DC_stats_id_104020_header')" id="DC_stats_id_104020_header">Domain Checks Statistics</h4>
+  <div id="DC_id_104020_stats">
+      <table class="table coverage-table-sizing">
+        <tr>
+          <th>Type</th>
+          <th>Total</th>
+          <th>Handled</th>
+          <th>Covered</th>
+          <th>Unreachable</th>
+        </tr>
+            <tr>
+              <td>Valid Ranges</td>
+              <td>
+                0
+              </td>
+              <td>
+                n/a
+              </td>
+              <td>
+                n/a
+              </td>
+              <td>
+                n/a
+              </td>
+            </tr>
+            <tr>
+              <td>Invalid Ranges</td>
+              <td>
+                0
+              </td>
+              <td>
+                n/a
+              </td>
+              <td>
+                n/a
+              </td>
+              <td>
+                n/a
+              </td>
+            </tr>
+      </table>
+  </div>
+<h4 class="anchored extended" onclick="toggleSection('UDCG_stats_id_104030_table','UDCG_stats_id_104030_header')" id="UDCG_stats_id_104030_header" >User-defined Coverage Goals Statistics</h4>
+<div id="UDCG_stats_id_104030_table">
+<table class="table coverage-table-sizing" >
+  <tr>            
+    <th>Type</th>
+    <th>Total</th>
+    <th>Handled</th>
+    <th>Covered</th>
+    <th>Unreachable</th>
+  </tr>
+  <tr>
+    <td>User-defined Coverage Goals</td>
+    <td>0</td>
+    <td>n/a</td>
+    <td>n/a</td>
+    <td>n/a</td>
+  </tr>
+</table>
+</div>
+            </div>
+        </div>
     </div>
 
     <script>
