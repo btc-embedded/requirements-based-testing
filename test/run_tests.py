@@ -101,6 +101,8 @@ def run_sil_tests():
     rbt_coverage = ep.get(f"scopes/{toplevel_scope_uid}/coverage-results-rbt")
     util.print_rbt_results(rbt_response, rbt_coverage)
 
+    publish_results_to_polarion(ep)
+
     # Create project report
     report = ep.post(f"scopes/{toplevel_scope_uid}/project-report?template-name=rbt-tl", message="Creating test report")
     # export project report to a file called 'report.html'
@@ -205,6 +207,28 @@ def import_requirements(ep):
             'settings' : settings,
         }
         ep.post('requirements-import', req_import_payload, message="Importing requirements from Polarion")
+
+def publish_results_to_polarion(ep):
+    req_src = ep.get('requirements-sources')[0]
+    project_url = next((setting['value'] for setting in req_src['settings'] if setting['key'] == 'project_url'), None)
+    host = next((setting['value'] for setting in req_src['settings'] if setting['key'] == 'host'), None)
+    port = next((setting['value'] for setting in req_src['settings'] if setting['key'] == 'port'), None)
+    payload = {
+        "settings" : [
+            { "key": "Project ID", "value": project_url},
+            { "key": "Host", "value": host },
+            { "key": "Port", "value": port },
+            { "key": "username", "value": os.environ.get('POLARION_USERNAME') },
+            { "key": "pwd", "value": os.environ.get('POLARION_PWD') },
+            { "key": "Linked Requirement Role", "value": "verifies" },
+            { "key": "Work Item Types", "value": "Test Case" }
+        ],
+        "execConfigNames" : [ "SIL" ],
+        "requirementsSourceUid" : req_src['uid'],
+        "syncMode" : "EP",
+        "testStepsConsidered" : True
+    }
+    ep.post('test-case-source-sync', payload, message="Publishing test results to Polarion")
 
 if __name__ == '__main__':
     success = run_mil_tests()
