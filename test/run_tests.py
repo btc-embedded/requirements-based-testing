@@ -230,9 +230,14 @@ def publish_results_to_polarion(ep):
     }
     ep.post('test-case-source-sync', payload, message="Publishing test results to Polarion")
 
+def announce(message: str):
+    print(f"\n{'#' * 80}\n\n{message}\n\n{'#' * 80}")
+
 if __name__ == '__main__':
+    announce("Running tests on MIL")
     success = run_mil_tests()
     if success:
+        announce("MIL tests passed, now running tests on SIL")
         success = run_sil_tests()
     else:
-        print("MIL tests failed. Skipping SIL tests, coverage, etc.")
+        announce("MIL tests failed. Skipping SIL tests, coverage, etc.")
