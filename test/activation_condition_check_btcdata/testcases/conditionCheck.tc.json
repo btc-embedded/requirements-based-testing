@@ -1,0 +1,53 @@
+{
+  "version":"1.1",
+  "metaData":{
+    "name":"conditionCheck",
+    "scopePath":"",
+    "architecture":"Wrapper_activation_condition_check",
+    "length":"2",
+    "draft":"false",
+    "created":"7 Apr 2025, 11:34",
+    "lastUpdated":"7 Apr 2025, 11:35"
+  },
+  "vectorContent":{
+    "steps":[ {
+      "step":{
+        "number":"0",
+        "inputs":[ {
+          "SeatOccupied_SeatOccupied_read":"0"
+        }, {
+          "PowerMgtState_PowerMgtState_read":"0"
+        }, {
+          "PowerMgtState_PowerMgtState_ErrorStatus_read":"1"
+        } ],
+        "outputs":[ {
+          "ActivationCondition_write":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"1",
+        "comment":"system shall be active",
+        "inputs":[ {
+          "SeatOccupied_SeatOccupied_read":"1"
+        }, {
+          "PowerMgtState_PowerMgtState_read":"1"
+        }, {
+          "PowerMgtState_PowerMgtState_ErrorStatus_read":"0"
+        } ],
+        "outputs":[ {
+          "ActivationCondition_write":"1"
+        } ]
+      }
+    } ]
+  },
+  "interface":{
+    "inputs":[ "SeatOccupied_SeatOccupied_read", "PowerMgtState_PowerMgtState_read", "PowerMgtState_PowerMgtState_ErrorStatus_read" ],
+    "parameters":[ "RTE_OK" ],
+    "outputs":[ "ActivationCondition_write" ]
+  },
+  "origin":{
+    "type":"manual",
+    "date":"7 Apr 2025, 11:34:33"
+  }
+}

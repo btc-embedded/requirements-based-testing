@@ -1,0 +1,11 @@
+{
+  "version":"1.0",
+  "configuration":{
+    "signals":{
+      "parameters":[ {
+        "name":"RTE_OK",
+        "visible":false
+      } ]
+    }
+  }
+}
