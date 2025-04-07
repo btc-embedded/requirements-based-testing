@@ -198,7 +198,8 @@ def import_requirements(ep):
             { 'key': 'pwd', 'value': os.environ.get('POLARION_PWD') },
             { 'key': 'host', 'value': get_by_key(req_data['importOptions'], 'Host') },
             { 'key': 'port', 'value': get_by_key(req_data['importOptions'], 'Port') },
-            { 'key': 'work_item_types', 'value': get_by_key(req_data['importOptions'], 'Work Item Types') }
+            { 'key': 'filter', 'value': 'type:requirement' }
+            
         ]
         req_import_payload = {
             'kind' : req_data['metaData']['kind'].upper(),
