@@ -8,7 +8,7 @@ def run_btc_test():
     epx_file = os.path.abspath("test/seat_heating_controller.epx")
     project_name = os.path.basename(epx_file)[:-4]
     work_dir = os.path.dirname(epx_file)
-    report_dir = os.path.join(work_dir, 'reports')
+    report_dir = os.path.join(os.path.dirname(work_dir), 'reports')
     # BTC EmbeddedPlatform API object
     ep = EPRestApi()
 
