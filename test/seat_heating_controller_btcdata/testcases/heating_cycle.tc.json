@@ -5,24 +5,24 @@
     "scopePath":"",
     "architecture":"seat_heating_controller",
     "description":"adfasdga",
-    "length":"18",
+    "length":"24",
     "draft":"false",
     "created":"9 Mar 2026, 13:06",
-    "lastUpdated":"9 Mar 2026, 13:11"
+    "lastUpdated":"9 Mar 2026, 16:02"
   },
   "vectorContent":{
     "steps":[ {
       "step":{
         "number":"0",
         "usedTestMacros":[ {
-          "uuid":"272",
+          "uuid":"25E",
           "name":"system_active",
           "endStep":0,
           "isPartial":true,
           "type":"Non-initial"
         } ],
         "inputs":[ {
-          "Get_ButtonPressed":"sg(Square, 18, Simulink, false, true, f=4, a=1, o=0, false)"
+          "Get_ButtonPressed":"sg(Square, 24, Simulink, false, true, f=4, a=1, o=0, false)"
         } ]
       }
     }, {
@@ -78,9 +78,21 @@
           "Set_CoilTemperature":"0"
         } ]
       }
+    }, {
+      "step":{
+        "number":"18",
+        "comment":"fifth button press: high temp",
+        "outputs":[ {
+          "Set_CoilTemperature":"af(TemperatureRanges_HIGH, 4, false)"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"23"
+      }
     } ]
   },
-  "requirements":[ "subterra:data-service:objects:/default/shc${WorkItem}SHC-87", "subterra:data-service:objects:/default/shc${WorkItem}SHC-86", "subterra:data-service:objects:/default/shc${WorkItem}SHC-85", "subterra:data-service:objects:/default/shc${WorkItem}SHC-84", "subterra:data-service:objects:/default/shc${WorkItem}SHC-89", "subterra:data-service:objects:/default/shc${WorkItem}SHC-88", "subterra:data-service:objects:/default/shc${WorkItem}SHC-90", "subterra:data-service:objects:/default/shc${WorkItem}SHC-83", "subterra:data-service:objects:/default/shc${WorkItem}SHC-82", "subterra:data-service:objects:/default/shc${WorkItem}SHC-92", "subterra:data-service:objects:/default/shc${WorkItem}SHC-81", "subterra:data-service:objects:/default/shc${WorkItem}SHC-91" ],
+  "requirements":[ "subterra:data-service:objects:/default/shc${WorkItem}SHC-87", "subterra:data-service:objects:/default/shc${WorkItem}SHC-86", "subterra:data-service:objects:/default/shc${WorkItem}SHC-85", "subterra:data-service:objects:/default/shc${WorkItem}SHC-84", "subterra:data-service:objects:/default/shc${WorkItem}SHC-89", "subterra:data-service:objects:/default/shc${WorkItem}SHC-88", "subterra:data-service:objects:/default/shc${WorkItem}SHC-90", "subterra:data-service:objects:/default/shc${WorkItem}SHC-83", "subterra:data-service:objects:/default/shc${WorkItem}SHC-82", "subterra:data-service:objects:/default/shc${WorkItem}SHC-92", "subterra:data-service:objects:/default/shc${WorkItem}SHC-81", "subterra:data-service:objects:/default/shc${WorkItem}SHC-91", "subterra:data-service:objects:/default/shc${WorkItem}SHC-80" ],
   "interface":{
     "inputs":[ "SeatOccupied", "PowerMgtState", "PowerMgtState_ErrorStatus", "Get_ButtonPressed" ],
     "parameters":[ "TemperatureRanges_HIGH", "TemperatureRanges_LOW", "TemperatureRanges_MEDIUM" ],

@@ -19,7 +19,7 @@
   "Domain Checks Auto Update" : true,
   "ep.simulation.ml.bl.prefs.pilExecutionCleanCode" : false,
   "User Defined Test Auto Update" : true,
-  "ep.simulation.bl.prefs.removeExecutionRecordsWithError" : true,
+  "ep.simulation.bl.prefs.removeExecutionRecordsWithError" : false,
   "RttObserverExport_Folder" : null,
   "ep.base.ui.usecase.id" : null,
   "ep.simulation.ml.bl.prefs.sl_simulation_mode" : "normal",
