@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sl:SimulinkArchitecture xmlns:sl="http://btc-es.de/ep/simulink/2014/12/09" modelVersion="10.2" modelPath="E:/home/WindowsFolders/Documents/GitHub/requirements-based-testing/model/seat_heating_controller.slx" modelCreationDate="2022-04-07T09:55:28" creator="developer">
+	<toolInfo name="Matlab" release="(R2024b)" version="24.2" patchLevel="" />
+	<toolInfo name="Simulink" release="(R2024b)" version="24.2" patchLevel="" />
+	<model modelID="module001" modelKind="model" modelVersion="10.2" modelPath="E:/home/WindowsFolders/Documents/GitHub/requirements-based-testing/model/seat_heating_controller.slx" creationDate="2022-04-07T09:55:28" modificationDate="2026-03-09T13:03:38">
+		<subsystem subsysID="ss1" physicalPath="seat_heating_controller" path="" sampleTime="0.2" name="seat_heating_controller" scopeKind="SUT" kind="model_ref">
+			<inport portNumber="1" name="SeatOccupied" physicalPath="seat_heating_controller/SeatOccupied" path="SeatOccupied">
+				<boolean />
+			</inport>
+			<inport portNumber="2" name="PowerMgtState" physicalPath="seat_heating_controller/PowerMgtState" path="PowerMgtState">
+				<enumType name="IDT_PowerState">
+					<enumElement name="NOK" value="0" />
+					<enumElement name="OK" value="1" />
+				</enumType>
+			</inport>
+			<inport portNumber="3" name="PowerMgtState_ErrorStatus" physicalPath="seat_heating_controller/PowerMgtState_ErrorStatus" path="PowerMgtState_ErrorStatus">
+				<double />
+			</inport>
+			<inport portNumber="4" name="Get_ButtonPressed" physicalPath="seat_heating_controller/Get_ButtonPressed" path="Get_ButtonPressed">
+				<double />
+			</inport>
+			<parameter name="TemperatureRanges_HIGH" path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_HIGH" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_HIGH" origin="explicit_param" workspace="TemperatureRanges_HIGH" initValue="45.0">
+				<double />
+				<usageContext path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_HIGH" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_HIGH" simulinkBlockType="Constant" blockAttribute="Value" />
+			</parameter>
+			<parameter name="TemperatureRanges_LOW" path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_LOW" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_LOW" origin="explicit_param" workspace="TemperatureRanges_LOW" initValue="30.0">
+				<double />
+				<usageContext path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_LOW" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_LOW" simulinkBlockType="Constant" blockAttribute="Value" />
+			</parameter>
+			<parameter name="TemperatureRanges_MEDIUM" path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_MEDIUM" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_MEDIUM" origin="explicit_param" workspace="TemperatureRanges_MEDIUM" initValue="35.0">
+				<double />
+				<usageContext path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_MEDIUM" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_MEDIUM" simulinkBlockType="Constant" blockAttribute="Value" />
+			</parameter>
+			<outport portNumber="1" name="LEDFeedback" physicalPath="seat_heating_controller/LEDFeedback" path="LEDFeedback">
+				<array size="3" startIndex="1">
+					<boolean />
+				</array>
+			</outport>
+			<outport portNumber="2" name="Set_CoilTemperature" physicalPath="seat_heating_controller/Set_CoilTemperature" path="Set_CoilTemperature">
+				<double />
+			</outport>
+			<subsystem refSubsysID="ss2" />
+			<subsystem refSubsysID="ss3" />
+			<subsystem refSubsysID="ss4" />
+		</subsystem>
+		<subsystem subsysID="ss2" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/activation_condition_check" path="seat_heating_controller/Subsystem/seat_heating_controller/activation_condition_check" sampleTime="0.2" name="activation_condition_check" scopeKind="SUT" kind="basic_subsystem">
+			<inport portNumber="1" name="SeatOccupied_SeatOccupied_read" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/activation_condition_check/SeatOccupied_SeatOccupied_read" path="seat_heating_controller/Subsystem/seat_heating_controller/activation_condition_check/SeatOccupied_SeatOccupied_read">
+				<boolean />
+			</inport>
+			<inport portNumber="2" name="PowerMgtState_PowerMgtState_read" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/activation_condition_check/PowerMgtState_PowerMgtState_read" path="seat_heating_controller/Subsystem/seat_heating_controller/activation_condition_check/PowerMgtState_PowerMgtState_read">
+				<enumType name="IDT_PowerState">
+					<enumElement name="NOK" value="0" />
+					<enumElement name="OK" value="1" />
+				</enumType>
+			</inport>
+			<inport portNumber="3" name="PowerMgtState_PowerMgtState_ErrorStatus_read" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/activation_condition_check/PowerMgtState_PowerMgtState_ErrorStatus_read" path="seat_heating_controller/Subsystem/seat_heating_controller/activation_condition_check/PowerMgtState_PowerMgtState_ErrorStatus_read">
+				<double />
+			</inport>
+			<outport portNumber="1" name="ActivationCondition_write" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/activation_condition_check/ActivationCondition_write" path="seat_heating_controller/Subsystem/seat_heating_controller/activation_condition_check/ActivationCondition_write">
+				<boolean />
+			</outport>
+		</subsystem>
+		<subsystem subsysID="ss3" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/button_press_to_temp_stage" path="seat_heating_controller/Subsystem/seat_heating_controller/button_press_to_temp_stage" sampleTime="0.2" name="button_press_to_temp_stage" scopeKind="SUT" kind="basic_subsystem">
+			<inport portNumber="1" name="button_pressed" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/button_press_to_temp_stage/button_pressed" path="seat_heating_controller/Subsystem/seat_heating_controller/button_press_to_temp_stage/button_pressed">
+				<double />
+			</inport>
+			<outport portNumber="1" name="TemperatureStage_write" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/button_press_to_temp_stage/TemperatureStage_write" path="seat_heating_controller/Subsystem/seat_heating_controller/button_press_to_temp_stage/TemperatureStage_write">
+				<uint8 />
+			</outport>
+		</subsystem>
+		<subsystem subsysID="ss4" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation" path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation" sampleTime="0.2" name="output_calculation" scopeKind="SUT" kind="basic_subsystem">
+			<inport portNumber="1" name="ActivationCondition_read" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/ActivationCondition_read" path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/ActivationCondition_read" signalName="ActivationCondition">
+				<boolean />
+			</inport>
+			<inport portNumber="2" name="TemperatureStage_read" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/TemperatureStage_read" path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/TemperatureStage_read" signalName="TemperatureStage">
+				<uint8 />
+			</inport>
+			<parameter name="TemperatureRanges_HIGH" path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_HIGH" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_HIGH" origin="explicit_param" workspace="TemperatureRanges_HIGH" initValue="45.0">
+				<double />
+				<usageContext path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_HIGH" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_HIGH" simulinkBlockType="Constant" blockAttribute="Value" />
+			</parameter>
+			<parameter name="TemperatureRanges_LOW" path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_LOW" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_LOW" origin="explicit_param" workspace="TemperatureRanges_LOW" initValue="30.0">
+				<double />
+				<usageContext path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_LOW" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_LOW" simulinkBlockType="Constant" blockAttribute="Value" />
+			</parameter>
+			<parameter name="TemperatureRanges_MEDIUM" path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_MEDIUM" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_MEDIUM" origin="explicit_param" workspace="TemperatureRanges_MEDIUM" initValue="35.0">
+				<double />
+				<usageContext path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_MEDIUM" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/Subsystem/TemperatureRanges_MEDIUM" simulinkBlockType="Constant" blockAttribute="Value" />
+			</parameter>
+			<outport portNumber="1" name="LEDFeedback" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/LEDFeedback" path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/LEDFeedback">
+				<array size="3" startIndex="1">
+					<boolean />
+				</array>
+			</outport>
+			<outport portNumber="2" name="CoilTemperature" physicalPath="seat_heating_controller/seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/CoilTemperature" path="seat_heating_controller/Subsystem/seat_heating_controller/output_calculation/CoilTemperature">
+				<double />
+			</outport>
+		</subsystem>
+		<rootSystem refSubsysID="ss1" />
+	</model>
+	<root refModelID="module001" />
+</sl:SimulinkArchitecture>

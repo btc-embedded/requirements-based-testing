@@ -2,5 +2,14 @@
   "Subsystem" : [ {
     "relPath" : "",
     "Output" : [ ]
+  }, {
+    "relPath" : "seat_heating_controller/Subsystem/seat_heating_controller/activation_condition_check",
+    "Output" : [ ]
+  }, {
+    "relPath" : "seat_heating_controller/Subsystem/seat_heating_controller/button_press_to_temp_stage",
+    "Output" : [ ]
+  }, {
+    "relPath" : "seat_heating_controller/Subsystem/seat_heating_controller/output_calculation",
+    "Output" : [ ]
   } ]
 }

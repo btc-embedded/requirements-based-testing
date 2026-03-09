@@ -1,0 +1,11 @@
+{
+  "version":"1.0",
+  "configuration":{
+    "signals":{
+      "inputs":[ {
+        "name":"PowerMgtState_PowerMgtState_read",
+        "width":64
+      } ]
+    }
+  }
+}

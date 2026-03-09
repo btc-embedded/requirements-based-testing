@@ -1,0 +1,17 @@
+{
+  "version":"1.0",
+  "configuration":{
+    "signals":{
+      "outputs":[ {
+        "name":"LEDFeedback(2)",
+        "visible":false
+      }, {
+        "name":"LEDFeedback(3)",
+        "visible":false
+      }, {
+        "name":"LEDFeedback(1)",
+        "visible":false
+      } ]
+    }
+  }
+}

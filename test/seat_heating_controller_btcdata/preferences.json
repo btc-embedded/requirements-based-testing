@@ -4,6 +4,7 @@
   "ep.simulation.ml.bl.prefs.useTldsStubbing" : false,
   "ep.simulation.ml.bl.prefs.reuseModelCallbacks" : "",
   "ep.simulation.ml.bl.prefs.pilTimeoutConfiguration" : 60,
+  "ep.testcomposer.base.ui.preferences.TCShowParameterValuesPreferenceKey" : true,
   "ep.coverage.ccode.bl.prefs.autoUpdate" : true,
   "ep.da.tolerance.double" : "0",
   "ep.da.tolerance.float" : "0",

@@ -3,7 +3,7 @@
     "kind":"Polarion",
     "name":"shc",
     "externalUUID":"UUID http://polarion03.prom.local/polarion/redirect/project/shc",
-    "lastImportDate":"4 Apr 2025, 13:39",
+    "lastImportDate":"9 Mar 2026, 13:04",
     "additionalAttributes":[ ]
   },
   "requirements":[ {
@@ -15,7 +15,7 @@
       "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-80",
       "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-80",
       "parent":"",
-      "lastUpdated":"4 Apr 2025, 13:39",
+      "lastUpdated":"9 Mar 2026, 13:04",
       "deleted":"false",
       "additionalAttributes":[ ]
     }, {
@@ -25,7 +25,7 @@
       "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-81",
       "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-81",
       "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-94",
-      "lastUpdated":"4 Apr 2025, 13:39",
+      "lastUpdated":"9 Mar 2026, 13:04",
       "deleted":"false",
       "additionalAttributes":[ ]
     }, {
@@ -35,7 +35,7 @@
       "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-82",
       "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-82",
       "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-94",
-      "lastUpdated":"4 Apr 2025, 13:39",
+      "lastUpdated":"9 Mar 2026, 13:04",
       "deleted":"false",
       "additionalAttributes":[ ]
     }, {
@@ -45,7 +45,7 @@
       "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-83",
       "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-83",
       "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-94",
-      "lastUpdated":"4 Apr 2025, 13:39",
+      "lastUpdated":"9 Mar 2026, 13:04",
       "deleted":"false",
       "additionalAttributes":[ ]
     }, {
@@ -55,7 +55,7 @@
       "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-84",
       "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-84",
       "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-95",
-      "lastUpdated":"4 Apr 2025, 13:39",
+      "lastUpdated":"9 Mar 2026, 13:04",
       "deleted":"false",
       "additionalAttributes":[ ]
     }, {
@@ -65,7 +65,7 @@
       "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-85",
       "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-85",
       "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-95",
-      "lastUpdated":"4 Apr 2025, 13:39",
+      "lastUpdated":"9 Mar 2026, 13:04",
       "deleted":"false",
       "additionalAttributes":[ ]
     }, {
@@ -75,7 +75,7 @@
       "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-86",
       "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-86",
       "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-95",
-      "lastUpdated":"4 Apr 2025, 13:39",
+      "lastUpdated":"9 Mar 2026, 13:04",
       "deleted":"false",
       "additionalAttributes":[ ]
     }, {
@@ -85,7 +85,7 @@
       "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-87",
       "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-87",
       "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-96",
-      "lastUpdated":"4 Apr 2025, 13:39",
+      "lastUpdated":"9 Mar 2026, 13:04",
       "deleted":"false",
       "additionalAttributes":[ ]
     }, {
@@ -95,7 +95,7 @@
       "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-88",
       "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-88",
       "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-96",
-      "lastUpdated":"4 Apr 2025, 13:39",
+      "lastUpdated":"9 Mar 2026, 13:04",
       "deleted":"false",
       "additionalAttributes":[ ]
     }, {
@@ -105,7 +105,7 @@
       "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-89",
       "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-89",
       "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-96",
-      "lastUpdated":"4 Apr 2025, 13:39",
+      "lastUpdated":"9 Mar 2026, 13:04",
       "deleted":"false",
       "additionalAttributes":[ ]
     }, {
@@ -115,7 +115,7 @@
       "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-90",
       "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-90",
       "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-97",
-      "lastUpdated":"4 Apr 2025, 13:39",
+      "lastUpdated":"9 Mar 2026, 13:04",
       "deleted":"false",
       "additionalAttributes":[ ]
     }, {
@@ -125,7 +125,7 @@
       "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-91",
       "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-91",
       "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-97",
-      "lastUpdated":"4 Apr 2025, 13:39",
+      "lastUpdated":"9 Mar 2026, 13:04",
       "deleted":"false",
       "additionalAttributes":[ ]
     }, {
@@ -135,7 +135,7 @@
       "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-92",
       "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-92",
       "parent":"subterra:data-service:objects:/default/shc${WorkItem}SHC-97",
-      "lastUpdated":"4 Apr 2025, 13:39",
+      "lastUpdated":"9 Mar 2026, 13:04",
       "deleted":"false",
       "additionalAttributes":[ ]
     }, {
@@ -145,7 +145,7 @@
       "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-94",
       "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-94",
       "parent":"",
-      "lastUpdated":"4 Apr 2025, 13:39",
+      "lastUpdated":"9 Mar 2026, 13:04",
       "deleted":"false",
       "additionalAttributes":[ ]
     }, {
@@ -155,7 +155,7 @@
       "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-95",
       "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-95",
       "parent":"",
-      "lastUpdated":"4 Apr 2025, 13:39",
+      "lastUpdated":"9 Mar 2026, 13:04",
       "deleted":"false",
       "additionalAttributes":[ ]
     }, {
@@ -165,7 +165,7 @@
       "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-96",
       "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-96",
       "parent":"",
-      "lastUpdated":"4 Apr 2025, 13:39",
+      "lastUpdated":"9 Mar 2026, 13:04",
       "deleted":"false",
       "additionalAttributes":[ ]
     }, {
@@ -175,11 +175,12 @@
       "externalUUID":"subterra:data-service:objects:/default/shc${WorkItem}SHC-97",
       "url":"http://polarion03.prom.local/polarion/redirect/project/shc/workitem?id=SHC-97",
       "parent":"",
-      "lastUpdated":"4 Apr 2025, 13:39",
+      "lastUpdated":"9 Mar 2026, 13:04",
       "deleted":"false",
       "additionalAttributes":[ ]
     } ]
   } ],
+  "excludedRequirements":[ ],
   "settings":[ {
     "key":"Host",
     "value":"http://polarion03.prom.local"

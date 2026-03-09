@@ -1,0 +1,93 @@
+{
+  "version":"1.1",
+  "metaData":{
+    "name":"heating_cycle",
+    "scopePath":"",
+    "architecture":"seat_heating_controller",
+    "description":"adfasdga",
+    "length":"18",
+    "draft":"false",
+    "created":"9 Mar 2026, 13:06",
+    "lastUpdated":"9 Mar 2026, 13:11"
+  },
+  "vectorContent":{
+    "steps":[ {
+      "step":{
+        "number":"0",
+        "usedTestMacros":[ {
+          "uuid":"272",
+          "name":"system_active",
+          "endStep":0,
+          "isPartial":true,
+          "type":"Non-initial"
+        } ],
+        "inputs":[ {
+          "Get_ButtonPressed":"sg(Square, 18, Simulink, false, true, f=4, a=1, o=0, false)"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"2",
+        "comment":"first button press: high temp",
+        "outputs":[ {
+          "Set_CoilTemperature":"af(TemperatureRanges_HIGH, 4, false)"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"6",
+        "comment":"second button press: medium temp",
+        "outputs":[ {
+          "Set_CoilTemperature":"af(TemperatureRanges_MEDIUM, 4, false)"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"10",
+        "comment":"third button press: low temp",
+        "outputs":[ {
+          "Set_CoilTemperature":"af(TemperatureRanges_LOW, 4, false)"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"14",
+        "comment":"fourth button press: off",
+        "outputs":[ {
+          "Set_CoilTemperature":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"15",
+        "outputs":[ {
+          "Set_CoilTemperature":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"16",
+        "outputs":[ {
+          "Set_CoilTemperature":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"17",
+        "outputs":[ {
+          "Set_CoilTemperature":"0"
+        } ]
+      }
+    } ]
+  },
+  "requirements":[ "subterra:data-service:objects:/default/shc${WorkItem}SHC-87", "subterra:data-service:objects:/default/shc${WorkItem}SHC-86", "subterra:data-service:objects:/default/shc${WorkItem}SHC-85", "subterra:data-service:objects:/default/shc${WorkItem}SHC-84", "subterra:data-service:objects:/default/shc${WorkItem}SHC-89", "subterra:data-service:objects:/default/shc${WorkItem}SHC-88", "subterra:data-service:objects:/default/shc${WorkItem}SHC-90", "subterra:data-service:objects:/default/shc${WorkItem}SHC-83", "subterra:data-service:objects:/default/shc${WorkItem}SHC-82", "subterra:data-service:objects:/default/shc${WorkItem}SHC-92", "subterra:data-service:objects:/default/shc${WorkItem}SHC-81", "subterra:data-service:objects:/default/shc${WorkItem}SHC-91" ],
+  "interface":{
+    "inputs":[ "SeatOccupied", "PowerMgtState", "PowerMgtState_ErrorStatus", "Get_ButtonPressed" ],
+    "parameters":[ "TemperatureRanges_HIGH", "TemperatureRanges_LOW", "TemperatureRanges_MEDIUM" ],
+    "outputs":[ "LEDFeedback(1)", "LEDFeedback(2)", "LEDFeedback(3)", "Set_CoilTemperature" ]
+  },
+  "origin":{
+    "type":"manual",
+    "date":"9 Mar 2026, 13:09:09"
+  }
+}

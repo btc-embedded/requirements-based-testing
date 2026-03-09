@@ -1,0 +1,124 @@
+{
+  "version":"1.1",
+  "metaData":{
+    "name":"system_activation",
+    "scopePath":"seat_heating_controller/Subsystem/seat_heating_controller/activation_condition_check",
+    "architecture":"seat_heating_controller",
+    "length":"8",
+    "draft":"false",
+    "created":"9 Mar 2026, 13:13",
+    "lastUpdated":"9 Mar 2026, 13:13"
+  },
+  "vectorContent":{
+    "steps":[ {
+      "step":{
+        "number":"0",
+        "comment":"invalid: system should stay off",
+        "inputs":[ {
+          "SeatOccupied_SeatOccupied_read":"0"
+        }, {
+          "PowerMgtState_PowerMgtState_read":"0"
+        }, {
+          "PowerMgtState_PowerMgtState_ErrorStatus_read":"1"
+        } ],
+        "outputs":[ {
+          "ActivationCondition_write":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"1",
+        "comment":"invalid: system should stay off",
+        "inputs":[ {
+          "PowerMgtState_PowerMgtState_ErrorStatus_read":"0"
+        } ],
+        "outputs":[ {
+          "ActivationCondition_write":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"2",
+        "comment":"invalid: system should stay off",
+        "inputs":[ {
+          "PowerMgtState_PowerMgtState_read":"1"
+        }, {
+          "PowerMgtState_PowerMgtState_ErrorStatus_read":"1"
+        } ],
+        "outputs":[ {
+          "ActivationCondition_write":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"3",
+        "comment":"invalid: system should stay off",
+        "inputs":[ {
+          "PowerMgtState_PowerMgtState_ErrorStatus_read":"0"
+        } ],
+        "outputs":[ {
+          "ActivationCondition_write":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"4",
+        "comment":"invalid: system should stay off",
+        "inputs":[ {
+          "SeatOccupied_SeatOccupied_read":"1"
+        }, {
+          "PowerMgtState_PowerMgtState_read":"0"
+        }, {
+          "PowerMgtState_PowerMgtState_ErrorStatus_read":"1"
+        } ],
+        "outputs":[ {
+          "ActivationCondition_write":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"5",
+        "comment":"invalid: system should stay off",
+        "inputs":[ {
+          "PowerMgtState_PowerMgtState_ErrorStatus_read":"0"
+        } ],
+        "outputs":[ {
+          "ActivationCondition_write":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"6",
+        "comment":"invalid: system should stay off",
+        "inputs":[ {
+          "PowerMgtState_PowerMgtState_read":"1"
+        }, {
+          "PowerMgtState_PowerMgtState_ErrorStatus_read":"1"
+        } ],
+        "outputs":[ {
+          "ActivationCondition_write":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"7",
+        "comment":"system active",
+        "inputs":[ {
+          "PowerMgtState_PowerMgtState_ErrorStatus_read":"0"
+        } ],
+        "outputs":[ {
+          "ActivationCondition_write":"1"
+        } ]
+      }
+    } ]
+  },
+  "requirements":[ "subterra:data-service:objects:/default/shc${WorkItem}SHC-80" ],
+  "interface":{
+    "inputs":[ "SeatOccupied_SeatOccupied_read", "PowerMgtState_PowerMgtState_read", "PowerMgtState_PowerMgtState_ErrorStatus_read" ],
+    "outputs":[ "ActivationCondition_write" ]
+  },
+  "origin":{
+    "type":"manual",
+    "date":"9 Mar 2026, 13:09:09"
+  }
+}
